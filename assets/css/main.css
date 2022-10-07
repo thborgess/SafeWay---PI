@@ -26,6 +26,11 @@ header {
     align-items: center;
 }
 
+header h1{
+    color: white;
+    font-size: 24px;
+}
+
 header img { 
     height: 20px;
 }
@@ -119,7 +124,7 @@ h2 {
 
 #ranking {
     width: 360px;
-    height: 370px;
+    height: 440px;
     background: #FFFFFF;
     border-radius: 10px;
     margin-top: 20px;
@@ -146,4 +151,161 @@ nav {
     height: 35px;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.posicao {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.colocacao {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #ADC8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.colocacao.primeiro{
+    background-color: #FFB03B;
+} 
+
+.colocacao.segundo{
+    background-color: #D9D9D9;
+} 
+
+.colocacao.terceiro{
+    background-color: #BA7715;
+} 
+
+
+.nomeUsina {
+    display: flex;
+}
+
+.nomeUsina p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 17px;
+}
+
+.barra{
+    height: 24px;
+    width: 320px;
+    background-color: #327B8B;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.barra p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #202022;
+    margin-right: 10px;
+}
+
+.barra.clara {
+    width: 266px;
+    background: #5BBBD0;
+}
+
+.barra.itapebi {
+    width: 246px;
+    background: #77B3D9;
+}
+
+.barra.lajeado {
+    width: 213px;
+    background: #7BC0EC;
+}
+
+.barra.tabajara {
+    width: 170px;
+    background: #9BDAD4;
+}
+
+.verMais {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 330px;
+    margin-top: 15px;
+}
+
+.verMais p {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #918E8E;
+}
+
+.verMais img {
+    height: 23px;
+    margin-left: 10px;
+}
+
+/* TELA CADASTRO */
+
+.secoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barratitulo img {
+    height: 25px;
+    margin-right: 30px;
+}
+
+
+.formulario {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #202022;
+}
+
+input {
+    width: 340px;
+    height: 55px;
+    border: 1px solid #918E8E;
+    border-radius: 10px;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 189px;
+    height: 52px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
 }
