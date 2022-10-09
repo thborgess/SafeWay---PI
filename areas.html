@@ -19,7 +19,7 @@
 </head>
 <body>
     <header  class="secoes">
-        <h1>Cadastro</h1>
+        <h1>Nome Usina</h1>
         <div class="barratitulo">
             <a href="index.html">
                 <img src="images/icons/x-saida.png" alt="saida">
@@ -28,22 +28,38 @@
     </header>
 
     <main>
-        <h1 class="h1cadastro">Informe os dados sobre a usina:</h1>
-        <div class="formulario">
-            <form>
-                <label for="fname">Nome do gestor:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Nome da usina:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="lname">Endereço:</label><br>
-                <input type="text" id="lname" name="lname"> 
-                <div class="botao">
-                    <a href="areas.html">
-                        <button type="button" href="" class="btn btn-primary">Cadastrar</button>
-                    </a>
-                </div>  
-            </form>
+        <h1>Escolha uma área para responder o questionário:</h1>
+        <div class="areasQuestionario">
+            <div id="arquitetura" class="coluna1">
+                <div class="area">
+                    <img src="images/icons/engineer-svgrepo-com.png" alt="">
+                    <p>Arquitetura Tecnológica</p>
+                </div>
+                <div id="inventario" class="area">
+                    <img src="images/icons/stock-svgrepo-com.png" alt="">
+                    <p>Inventário de Ativos</p>
+                </div>
+                <div id="acesso" class="area">
+                    <img src="images/icons/key-svgrepo-com.png" alt="">
+                    <p>Gestão de Acessos</p>
+                </div>
+            </div>
+            <div class="coluna2">
+                <div id="governanca" class="area">
+                    <img src="images/icons/boss-svgrepo-com.png" alt="">
+                    <p>Governança de Segurança da Informação</p>
+                </div>
+                <div id="vulnerabilidade" class="area">
+                    <img src="images/icons/safety-svgrepo-com.png" alt="">
+                    <p>Gestão de Vulnerabilidades</p>
+                </div>
+                <div id="monitoramento" class="area">
+                    <img src="images/icons/eye-svgrepo-com.png" alt="">
+                    <p>Monitoramento e Respostas a Incidentes</p>
+                </div>
+            </div>
         </div>
+
     </main>
 
     <nav class="menuBar">

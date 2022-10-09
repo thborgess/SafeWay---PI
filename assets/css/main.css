@@ -313,3 +313,79 @@ input {
     line-height: 32px;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
 }
+
+/* TELA AREAS */
+
+.areasQuestionario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna1 {
+    margin-right: 20px;
+}
+
+.coluna2 {
+    margin-left: 20px;
+}
+
+.area {
+    height: 160px; 
+    width: 160px;
+    border-radius: 10px;
+    background-color: #2AB888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.area img {
+    margin-top: 15px;
+    height: 60px;
+}
+
+.area p {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#inventario {
+    background-color: #2C5BA8;
+}
+
+#acesso {
+    background-color: #A457BF;
+}
+
+#governanca {
+    background-color: #F5953B;
+}
+
+#governanca p {
+    font-size: 13px;
+}
+
+#vulnerabilidade {
+    background-color: #2393D9;
+}
+
+#monitoramento {
+    background-color: #E66267;
+}
+
+#monitoramento p {
+    font-size: 13px;
+}
+
+#monitoramento img {
+    height: 50px;
+}
