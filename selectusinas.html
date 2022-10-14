@@ -19,7 +19,7 @@
 </head>
 <body>
     <header  class="secoes">
-        <h1>Cadastro</h1>
+        <h1>Usinas</h1>
         <div class="barratitulo">
             <a href="index.html">
                 <img src="images/icons/x-saida.png" alt="saida">
@@ -28,18 +28,19 @@
     </header>
 
     <main>
-        <h1 class="h1cadastro">Informe os dados sobre a usina:</h1>
+        <h1 class="h1cadastro">Selecione uma usina:</h1>
         <div class="formulario">
             <form>
-                <label for="fname">Nome do gestor:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Nome da usina:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="lname">Endereço:</label><br>
-                <input type="text" id="lname" name="lname"> 
+                <select name="usinas" id="usinas">
+                    <option value="Usina Santa Clara">Usina Santa Clara</option>
+                    <option value="Usina Itapebi">Usina Itapebi</option>
+                    <option value="Usina Tabajara">Usina Tabajara</option>
+                    <option value="sina Porto Estrela">Usina Porto Estrela</option>
+                    <option value="Usina Lajeado">Usina Lajeado</option>
+                </select>
                 <div class="botao">
-                    <a href="areas.html">
-                        <button type="button" href="" class="btn btn-primary">Cadastrar</button>
+                    <a href="perfilusina.html">
+                        <button type="button" href="" class="btn btn-primary">Confirmar</button>
                     </a>
                 </div>  
             </form>
@@ -52,19 +53,13 @@
                 <a href="index.html"><img src="images/icons/home-svgrepo-com.png" alt=""></a>
             </div>
             <div class="link">
-                <a href="cadastro.html">
-                    <img src="images/icons/add-pngrepo-com.png" alt="">
-                </a>
+                <img src="images/icons/add-pngrepo-com.png" alt="">
             </div>
             <div class="link">
-                <a href="selectusinas.html">
-                    <img src="images/icons/edit-svgrepo-com.png" alt="">
-                </a>
+                <img src="images/icons/edit-svgrepo-com.png" alt="">
             </div>
             <div class="link">
-                <a href="">
-                    <img src="images/icons/tables.png" alt="">
-                </a>
+                <img src="images/icons/tables.png" alt="">
             </div>
         </div>
     </nav>

@@ -83,6 +83,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #cadastrar p, #editar p {
@@ -129,6 +130,7 @@ h2 {
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -196,16 +198,20 @@ nav {
     line-height: 17px;
 }
 
-.barra{
+.progress{
     height: 24px;
     width: 320px;
+}
+
+.progress-bar {
+    height: 24px;
     background-color: #327B8B;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.barra p {
+.progress p {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -213,22 +219,19 @@ nav {
     margin-right: 10px;
 }
 
-.barra.clara {
-    width: 266px;
+#clara {
     background: #5BBBD0;
 }
 
-.barra.itapebi {
-    width: 246px;
+#itapebi {
     background: #77B3D9;
 }
 
-.barra.lajeado {
-    width: 213px;
+#lajeado {
     background: #7BC0EC;
 }
 
-.barra.tabajara {
+#tabajara {
     width: 170px;
     background: #9BDAD4;
 }
@@ -293,7 +296,7 @@ label {
     color: #202022;
 }
 
-input {
+input, select {
     width: 340px;
     height: 55px;
     border: 1px solid #918E8E;
@@ -388,4 +391,31 @@ input {
 
 #monitoramento img {
     height: 50px;
+}
+
+/* TELA PERFIL USINA */
+
+.historico {
+    background-color: white;
+    width: 158px;
+    height: 134px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 30px;
+    display: flex;
+
+}
+
+.cardhistorico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconCard {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid #2AB888;
 }
