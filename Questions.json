@@ -1,0 +1,328 @@
+{
+"Q1":{   
+    "Area" : "Arquitetura Tecnológica",
+    "subArea": "Zona de Supervisão",
+    "Pergunta" : "Há uma Zona de supervisão da rede?",
+    "Resposta" :false
+},
+
+"Q2":{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea" : "Zona DMZ Operativa",
+    "Pergunta" : "Há uma Zona DMZ Operativa na rede?",
+    "Resposta" :false
+},
+"Q3":{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea": "Zona Corporativa",
+    "Pergunta" : "Há uma Zona Corporativa na rede? ",
+    "Resposta" :false
+},
+"Q4":{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea": "ARCiber não devem ser visíveis nem ser acessíveis a partir da internet, exceto nos casos previstos",
+    "Pergunta" : "há restrição de acesso ao seu ARCiber(Ambiente Regulado Cibernético)?",
+    "Resposta" :false
+},
+"Q5" :{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea": "Acesso ao ARCiber.",
+    "Pergunta" : "Caso seu ARCiber seja acessado por redes externas, há um uso de VPN por meio de um gateway com controle de segurança?",
+    "Resposta" :false
+},
+"Q6":{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea": "Soluções Antimalware devem ser implementadas",
+    "Pergunta" : "há soluções Antimalware atualizadas no seu ARCiber?",
+    "Resposta" :false
+},
+"Q7":{   
+    "area" : "Arquitetura Tecnológica",
+    "subArea": "Soluções de application whitelisting podem ser implementadas",
+    "Pergunta" : "Há uso de Application Whitelisting, ou como complemento a Soluções Antimalware?",
+    "Resposta" :false
+},
+"Q8":{   
+    "area" : "Governança de Segurança da Informação" ,
+    "subArea": "Nomear pelo menos um gestor e um suplente",
+    "Pergunta" : "Há um gestor e um suplente, responsáveis pela segurança cibernética e atuante como ponto externo?",
+    "Resposta" :false
+}, 
+"Q9":{   
+    "area" : "Governança de Segurança da Informação" ,
+    "subArea": "Estabelecida política que defina papéis e responsabilidades",
+    "Pergunta" : "há uma política definindo as responsabilidades na segurança cibernética?",
+    "Resposta" :false
+},
+"Q10":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Tipos de dispositivos",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: A cada 2 anos no mínimo?",
+    "Resposta" :false
+},
+"Q11":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Fabricante do equipamento",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: Indicando seu fabricante?",
+    "Resposta" :false
+},
+"Q12":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Função",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: indicando suas funções?",
+    "Resposta" :false
+},
+"Q13":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Endereço IP ou MAC Address",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: indicando seu endereço físico ou de rede?",
+    "Resposta" :false
+},
+"Q14":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Protocolo de aplicação e/ou porta de serviço",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: Indicando seu protocolo e portas de comunicação?",
+    "Resposta" :false
+},
+"Q15" :{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Versão do firmware e/ou sistema operacional quando aplicável",
+    "Pergunta" : "Os Ativos, Softwares e Hardwares são inventariados: indicando suas versões de firmeware e sistema operacional? ",
+    "Resposta" :false
+},
+"Q16" :{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Armazenamento, políticas e acesso aos inventários de ativos",
+    "Pergunta" : "há políticas de armazenamento bem definidas, com acesso restrito às pessoas? ",
+    "Resposta" :false
+},
+"Q17" :{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Padrões de configuração segura (Hardening)",
+    "Pergunta" : "há o uso de padrões de configuração segura (hardening)?",
+    "Resposta" :false
+},
+"Q18":{   
+    "area" : "Inventário de Ativos",
+    "subArea": "Mecanismo de monitoramento da conformidade de padrões",
+    "Pergunta" : "há implementando mecanismo de monitoramento, automatizados ou manuis?",
+    "Resposta" :false
+},
+"Q19" :{   
+    "area" : "Gestão de Vulnerabilidades",
+    "subArea": "Gestão de pacotes de correção de segurança (patches)",
+    "Pergunta" : "gestão de pacotes de correção de segurança (patches) para todas as tecnologias conectadas ao ARCiber ?",
+    "Resposta" :false
+},
+"Q20" :{   
+    "area" : "Gestão de Vulnerabilidades",
+    "subArea": "Cronograma de implementação das correções",
+    "Pergunta" : "gestão do cronograma de implementação das correções?",
+    "Resposta" :false
+},
+"Q21" :{   
+    "area" : "Gestão de Vulnerabilidades",
+    "subArea": "Mapeamento dos ativos inventariados para as atualizações disponibilizadas pelos fabricantes",
+    "Pergunta" : "gestão de ativos inventariados para as atualizações disponibilizadas pelos fabricantes?",
+    "Resposta" :false
+},
+"Q22" :{   
+    "area" : "Gestão de Vulnerabilidades",
+    "subArea": "Aplicação de todos os pacotes de correção de segurança",
+    "Pergunta" : "há restrições de novos ativos até que todos os pacotes de correção de segurança disponíveis sejam aplicados?",
+    "Resposta" :false
+},
+"Q23" :{   
+    "area" : "Gestão de Vulnerabilidades",
+    "subArea": "Prazo pré-definido para correção de segurança postergada",
+    "Pergunta" : "Em caso de substituição de equipamento defeituoso a um prazo definido até a aplicação dos pacotes de correção de segurança?",
+    "Resposta" :false
+},
+"Q24" :{
+    "area" : "Gestão de acessos",
+    "subArea": "Política de gestão de acessos",
+    "Pergunta" : "Há uma política de gestão de acessos e identidades?",
+    "Resposta" :false
+},
+"Q25" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Credenciais de acesso devem ser individuais e aprovadas",
+    "Pergunta" : "Há uso de credenciais de acesso individuais e aprovadas por uma alçada competente?",
+    "Resposta" :false
+},
+"Q26" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Manter uma lista das pessoas autorizadas",
+    "Pergunta" : "Há uso de uma lista das pessoas autorizadas a usar as contas compartilhadas?",
+    "Resposta" :false
+},
+"Q27" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Contas embarcadas",
+    "Pergunta" : "Há restrições de acesso à senha de contas embarcadas e número limitado de pessoas?",
+    "Resposta" :false
+},
+"Q28" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Credencial embarcada",
+    "Pergunta" : "há uma senha distinta a cada ativo que possua credencial embarcada? (uma mesma senha não deve ser atribuída a mais de um ativo) ",
+    "Resposta" :false
+},
+"Q29" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Política de senhas",
+    "Pergunta" : "Há uma política de senhas que contemple: tamanho mínimo, complexidade, necessidade de ser diferente da senha padrão do fabricante?",
+    "Resposta" :false
+},
+"Q30" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Implementar o nível máximo de senha suportado pelo ativo",
+    "Pergunta" : "Há ações caso um número máximo de tentativas de acesso malsucedidas seja atingido?",
+    "Resposta" :false
+},
+"Q31" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Princípio de minimização",
+    "Pergunta" : "Há critérios para a gestão de mudanças (prazo, ocorrência de incidentes)?",
+    "Resposta" :false
+},
+"Q32" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Cancelamento/Remoção de credenciais de usuários desligados",
+    "Pergunta" : "A política de senhas é implementada o nível máximo suportado pelo ativo por controles tecnológicos ou por procedimento?",
+    "Resposta" :false
+},
+"Q33" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Aprovação adequada, com revisão periódica",
+    "Pergunta" : "Na construção dos perfis de acesso é seguido o princípio de acesso mínimo necessário? ",
+    "Resposta" :false
+},
+"Q34" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Exclusividade durante a execução de tarefas administrativas",
+    "Pergunta" : "É definido um prazo máximo para cancelamento/remoção de credenciais de usuários desligados e de credenciais sem uso?  ",
+    "Resposta" :false
+},
+"Q35" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Monitoramento de trilhas de auditoria",
+    "Pergunta" : "Credenciais de acesso privilegiadas estão sujeitas a controles específicos: Com revisão periódica pelo gestor do ARCiber? ",
+    "Resposta" :false
+},
+"Q36" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Utilização de múltiplos fatores de autenticação",
+    "Pergunta" : "Credenciais de acesso privilegiadas estão sujeitas a controles específicos: Do exclusivo durante a execução de tarefas administrativas?",
+    "Resposta" :false
+},
+"Q37" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Contas embarcadas deve ser restrito a um número limitado de pessoas",
+    "Pergunta" : "Credenciais de acesso privilegiadas estão sujeitas a controles específicos: Monitoradas através de trilhas de auditoria?",
+    "Resposta" :false
+},
+"Q38" :{   
+    "area" : "Gestão de acessos",
+    "subArea": "Credencial embarcada deve possuir senhas distinta",
+    "Pergunta" : "Credenciais de acesso privilegiadas estão sujeitas a controles específicos: Como a utilização de múltiplos fatores de autenticação como, por exemplo, tokens OTP (one time password) ou reconhecimento biométrico?",
+    "Resposta" :false
+},
+"Q39" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Gerar logs de segurança apropriados para suportar investigações",
+    "Pergunta" : "Os ativos do ARCiber estão configurados para gerar logs de segurança apropriados para dar suporte a investigações e a reconstrução de possíveis incidentes de segurança?(armazenados por prazo definido nas políticas de segurança cibernética da organização)",
+    "Resposta" :false
+},
+"Q40" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Alertas para atividades suspeitas",
+    "Pergunta" : "Os dispositivos de segurança como Firewalls, IDS/IPS, Antimalware e subsistemas de autenticação estão configurados para gerar alertas caso identifiquem atividades suspeitas?",
+    "Resposta" :false
+},
+"Q41" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Alertas revisados periodicamente",
+    "Pergunta" : "As regras para geração de alertas são revisadas periodicamente?",
+    "Resposta" :false
+},
+"Q42" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Reportados imediatamente à equipe responsável",
+    "Pergunta" : "Todos os alertas são reportados imediatamente à equipe responsável definida na política de segurança do agente? ",
+    "Resposta" :false
+},
+"Q43" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Analisados e respondidos no prazo definido",
+    "Pergunta" : "Os alertas gerados são analisados e respondidos no prazo definido pela política de segurança do agente?",
+    "Resposta" :false
+},
+"Q44" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Mecanismos para identificação e Resposta a incidentes",
+    "Pergunta" : "Foram estabelecidos mecanismos para identificação e Resposta a incidentes cibernéticos tempestivamente?",
+    "Resposta" :false
+},
+"Q45" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Plano de Resposta a incidentes",
+    "Pergunta" : "Foi implementado um plano de Resposta a incidentes cibernéticos?",
+    "Resposta" :false
+},
+"Q46" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Estratégias de tratamento para cada cenário",
+    "Pergunta" : "Há uma identificação dos cenários de risco cibernéticos aplicáveis ao ARCiber e estratégias de tratamento para cada Renário?",
+    "Resposta" :false
+},
+"Q47" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Classificação do impacto",
+    "Pergunta" : "Foram estabelecidos níveis de classificação do impacto de um incidente à operação?",
+    "Resposta" :false
+},
+"Q48" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Papéis e responsabilidades",
+    "Pergunta" : "Há uma política de equipes envolvidas, com os seus respectivos papéis e responsabilidades antes, durante e depois dasRcrises?",
+    "Resposta" :false
+},
+"Q49" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Ativação do plano de Resposta a incidentes",
+    "Pergunta" : "Está definido critérios para ativação do plano de Resposta a incidentes cibernéticos?",
+    "Resposta" :false
+},
+"Q50" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Testes de ativação dos planos de Resposta a incidentes",
+    "Pergunta" : "São realizados testes de ativação dos planos de Resposta a incidentes cibernéticos periodicamente cobrindo as listas de aRivação (call tree) e revisão dos procedimentos descritos? (Gerando documentos de lições aprendidas e as respectivas ações corretivas e de melhorias)",
+    "Resposta" :false
+},
+"Q51" :{   
+    "area" : "Monitoramento e Respostas a Incidentes",
+    "subArea": "Incidentes cibernéticos em ativos do ARCiber",
+    "Pergunta" : "Incidentes cibernéticos que afetem ativos do ARCiber são informados ao ONS? ",
+    "Resposta" :false
+},
+"Q52" :{   
+    "area" : "Tratamento de Exceções",
+    "subArea": "Exceções gerada deve ser criada e documentada detalhadamente pelo gestos responsável",
+    "Pergunta" : "Os casos em que requisitos não possam ser implementados são tratados como uma exceção? (Cada exceção gerada deve ser cRiada e documentada detalhadamente, incluindo a data em que ela foi identificada, o motivo pelo qual ela precisa ser tratada como exceção, e ser aprovada pelo gestor responsável pela segurança cibernética do ARCiber)",
+    "Resposta" :false
+},
+
+"Q53" :{   
+    "area" : "Adoção de Controles Complementares",
+    "subArea": "Controles complementares nos ativos que integram",
+    "Pergunta" : "A organização adota controles complementares nos ativos que integram o ARCiber, conforme suas próprias políticas, dRretrizes e avaliações de risco?",
+    "Resposta" :false
+},
+"Q54" :{   
+    "area" : "Adoção de Controles Complementares",
+    "subArea": "Controles de segurança cibernética nos ativos que não integram",
+    "Pergunta":  "A organização adota controles de segurança cibernética nos ativos que não integram o ARCiber, conforme suas próprias pRlíticas, diretrizes e avaliações de risco? ",
+    "Resposta" :false
+}
+}
