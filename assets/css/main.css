@@ -57,7 +57,7 @@ a {
     text-decoration: none;
 }
 
-#cadastrar, #editar, #ranking {
+#cadastrar, #editar, .ranking {
     margin: auto;
 }
 
@@ -123,7 +123,7 @@ h2 {
     background-color: #B5B8FD;
 }
 
-#ranking {
+.ranking {
     width: 360px;
     height: 440px;
     background: #FFFFFF;
@@ -207,15 +207,18 @@ nav {
     height: 24px;
     background-color: #327B8B;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+
 }
 
 .progress p {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 14px;
     line-height: 17px;
     color: #202022;
+    margin: 0;
     margin-right: 10px;
 }
 
@@ -596,13 +599,192 @@ input, select {
 .cardNota {
     margin: auto;
     width: 100%;
-    height: 290px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 10;
+    left: 0;
 }
 
 .cardNota h1{
-    font-size: 17px;
+    margin: auto;
+    width: 390px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 0;
 }
+
+.pontuacaoUsina {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pontuacaoUsina .area{
+    height: 126px; 
+    width: 126px;
+}
+
+.pontuacaoUsina .area p{
+    font-size: 14px;
+}
+
+.pontuacaoUsina .area img{
+    height: 50px; 
+    width:50px;
+}
+
+.pontuacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pontuacao p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.pontuacao .nota {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: #0153FC;  
+}
+
+.barraRespostas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.abaRespostas {
+    height: 50px;
+    width: 33,3%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color:#858585;
+}
+
+.abaSelected {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color:#000000;
+    border-bottom: 3px solid #011C40;
+}
+
+.acertos, .erros{
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+.cardAcerto {
+    width: 358px;
+    height: 277px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #50B94E;
+    border-radius: 10px;
+}
+
+.questaoTitulo {
+    display: flex;
+    align-items: center;
+}
+
+.questaoTitulo h1{
+    color: white;
+    margin: 0;
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.cardAcerto p {
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.cardAcerto b {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.questaoTitulo img {
+    height: 54px;
+}
+
+.cardErro {
+    width: 358px;
+    height: 277px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #ED3535;
+    border-radius: 10px;
+}
+
+.cardErro p {
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.cardErro b {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+b a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+
+/* TELA RANKING */
+
+#geral {
+    height: 550px;
+}
+
+
+
+
+
+
+/* progessive bar */
+
