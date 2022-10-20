@@ -573,12 +573,14 @@ input, select {
     line-height: 24px;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 .selected {
     border: none;
     background: #0153FC;
-}
-
-#selected {
     color: white;
 }
 

@@ -31,33 +31,33 @@
         <h1 id="h1questao" class="h1questao"></h1>
         <div class="progress questoesArea">
             <div id="barraQuestionario" class="progress-bar" role="progressbar" aria-valuenow="32"
-                aria-valuemin="0" aria-valuemax="60" style="width:33.3%"></div>
+                aria-valuemin="0" aria-valuemax="60" style="width:0%"></div>
         </div>
         <div class="cardQuestoes">
             <div class="enunciado" id="enunciado">
                 <p></p>
             </div>
             <div class="alternativas">
-                <div class="cardAlternativa">
+                <div onclick="checkedBoxSim()" id="cardSim" class="cardAlternativa">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="true">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <label id="labelSim" class="form-check-label" for="flexRadioDefault1">
                           Sim.
                         </label>
                     </div>
                 </div>
-                <div class="cardAlternativa">
+                <div onclick="checkedBoxNao()" id="cardNao" class="cardAlternativa">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="selected">
-                        <label class="form-check-label" for="flexRadioDefault1" id="selected">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label id="labelNao" class="form-check-label" for="flexRadioDefault1">
                           Não.
                         </label>
                     </div>
                 </div>
-                <div class="cardAlternativa">
+                <div onclick="checkedBoxNaoSei()" id="cardNaoSei" class="cardAlternativa">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <label id="labelNaoSei"  class="form-check-label" for="flexRadioDefault1">
                           Não sei.
                         </label>
                     </div> 
@@ -66,7 +66,8 @@
         </div>
         <div id="botoesPergunta" class="botoesPergunta">
             <button onclick="antPergunta()" id="anterior" type="button" href="" class="btn btn-primary botao-questao" style="display: none;">Anterior</button>
-            <button onclick="proxPergunta()" type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
+            <button onclick="proxPergunta()" id="proximo" type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
+            <button onclick="proxPergunta()" id="finalizar" type="button" href="resultado.html" class="btn btn-primary botao-questao" style="display: none;"><a href='resultado.html'>Finalizar</a></button>
         </div>
     </main>
 

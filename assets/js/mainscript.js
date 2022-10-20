@@ -20,7 +20,7 @@ var arquiteturaTec = [
             "Resposta" :true
         },
         {         
-            "Pergunta" : "há soluções Antimalware atualizadas no seu ARCiber?",
+            "Pergunta" : "Há soluções Antimalware atualizadas no seu ARCiber?",
             "Resposta" :true
         },
         {         
@@ -36,9 +36,59 @@ function arquiteturaTec() {
     return area;
 }
 
-function checkedBox() {
-    document.querySelector(".cardAlternativa ").classList.add("selected");
+function checkedBoxSim() {
+    let cardSim = document.getElementById("cardSim");
+    let labelSim = document.getElementById("labelSim");
+    cardSim.classList.toggle("selected");
+    labelSim.classList.toggle("selected");
+
+    let cardNao = document.getElementById("cardNao");
+    cardNao.classList.remove("selected");
+    let labelNao = document.getElementById("labelNao");
+    labelNao.classList.remove("selected");
+
+    let cardNaoSei = document.getElementById("cardNaoSei");
+    cardNaoSei.classList.remove("selected");
+    let labelNaoSei = document.getElementById("labelNaoSei");
+    labelNaoSei.classList.remove("selected");
 }
+
+function checkedBoxNao() {
+    let cardSim = document.getElementById("cardSim");
+    cardSim.classList.remove("selected");
+    let labelSim = document.getElementById("labelSim");
+    labelSim.classList.remove("selected");
+
+    let labelNao = document.getElementById("labelNao");
+    labelNao.classList.toggle("selected");
+    let cardNao = document.getElementById("cardNao");
+    cardNao.classList.toggle("selected");
+
+    let labelNaoSei = document.getElementById("labelNaoSei");
+    labelNaoSei.classList.remove("selected");
+    let cardNaoSei = document.getElementById("cardNaoSei");
+    cardNaoSei.classList.remove("selected");
+}
+
+function checkedBoxNaoSei() {
+    let labelSim = document.getElementById("labelSim");
+    labelSim.classList.remove("selected");
+    let cardSim = document.getElementById("cardSim");
+    cardSim.classList.remove("selected");
+
+
+    let labelNao = document.getElementById("labelNao");
+    labelNao.classList.remove("selected");
+    let cardNao = document.getElementById("cardNao");
+    cardNao.classList.remove("selected");
+
+    let labelNaoSei = document.getElementById("labelNaoSei");
+    labelNaoSei.classList.toggle("selected");
+    let cardNaoSei = document.getElementById("cardNaoSei");
+    cardNaoSei.classList.toggle("selected");
+}
+
+
 
 var count = 0
 
@@ -52,9 +102,30 @@ function proxPergunta() {
     document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
 
 
-    if (count != 1) {
+    if (count != 0) {
         document.getElementById("botoesPergunta").style.justifyContent = 'space-between'
         document.getElementById("anterior").style.display = 'flex'
+    }
+
+    let cardSim = document.getElementById("cardSim");
+    cardSim.classList.remove("selected");
+    let labelSim = document.getElementById("labelSim");
+    labelSim.classList.remove("selected");
+    let labelNao = document.getElementById("labelNao");
+    labelNao.classList.remove("selected");
+    let cardNao = document.getElementById("cardNao");
+    cardNao.classList.remove("selected");
+    let labelNaoSei = document.getElementById("labelNaoSei");
+    labelNaoSei.classList.remove("selected");
+    let cardNaoSei = document.getElementById("cardNaoSei");
+    cardNaoSei.classList.remove("selected");
+
+    if (count == arquiteturaTec.length - 1) {
+        document.getElementById("finalizar").style.display = 'flex'
+        document.getElementById("proximo").style.display = 'none'
+    } else {
+        document.getElementById("finalizar").style.display = 'none'
+        document.getElementById("proximo").style.display = 'flex'
     }
 
     let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
@@ -69,11 +140,21 @@ function antPergunta() {
         count -= 1
     }
 
+    if (count == 0) {
+        document.getElementById("botoesPergunta").style.justifyContent = 'flex-end'
+        document.getElementById("anterior").style.display = 'none'
+    }
+
     console.log(count)
 
     document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
 
     document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
+
+    if (count != arquiteturaTec.length - 1) {
+        document.getElementById("finalizar").style.display = 'none'
+        document.getElementById("proximo").style.display = 'flex'
+    }
 
     let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
 
