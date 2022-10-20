@@ -21,24 +21,21 @@
     <header  class="secoes">
         <h1>Nome Área</h1>
         <div class="barratitulo">
-            <a href="index.html">
+            <a href="areas.html">
                 <img src="images/icons/x-saida.png" alt="saida">
             </a>
         </div>
     </header>
 
     <main>
-        <h1 class="h1questao">Questão 1 de 3</h1>
+        <h1 id="h1questao" class="h1questao"></h1>
         <div class="progress questoesArea">
             <div id="barraQuestionario" class="progress-bar" role="progressbar" aria-valuenow="32"
                 aria-valuemin="0" aria-valuemax="60" style="width:33.3%"></div>
         </div>
         <div class="cardQuestoes">
-            <div class="enunciado">
-                <p>As redes estão segregadas em
-                    zonas de segurança, 
-                    de acordo com a
-                    sua função?</p>
+            <div class="enunciado" id="enunciado">
+                <p></p>
             </div>
             <div class="alternativas">
                 <div class="cardAlternativa">
@@ -49,7 +46,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="cardAlternativa selected">
+                <div class="cardAlternativa">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="selected">
                         <label class="form-check-label" for="flexRadioDefault1" id="selected">
@@ -67,11 +64,9 @@
                 </div> 
             </div>
         </div>
-        <div class="botoesPergunta">
-            <button type="button" href="" class="btn btn-primary botao-questao" style="display: none;">Anterior</button>
-            <a href="resultado.html">
-                <button type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
-            </a>
+        <div id="botoesPergunta" class="botoesPergunta">
+            <button onclick="antPergunta()" id="anterior" type="button" href="" class="btn btn-primary botao-questao" style="display: none;">Anterior</button>
+            <button onclick="proxPergunta()" type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
         </div>
     </main>
 
@@ -91,5 +86,7 @@
             </div>
         </div>
     </nav>
+
+    <script src="assets/js/mainscript.js"></script>
 </body>
 </html>
