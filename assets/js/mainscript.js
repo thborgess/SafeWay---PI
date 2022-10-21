@@ -41,16 +41,20 @@ function checkedBoxSim() {
     let labelSim = document.getElementById("labelSim");
     cardSim.classList.toggle("selected");
     labelSim.classList.toggle("selected");
+    document.getElementById("checkedBoxSim").checked = true;
+    
 
     let cardNao = document.getElementById("cardNao");
     cardNao.classList.remove("selected");
     let labelNao = document.getElementById("labelNao");
     labelNao.classList.remove("selected");
+    document.getElementById("checkedBoxNao").checked = false;
 
     let cardNaoSei = document.getElementById("cardNaoSei");
     cardNaoSei.classList.remove("selected");
     let labelNaoSei = document.getElementById("labelNaoSei");
     labelNaoSei.classList.remove("selected");
+    document.getElementById("checkedBoxNaoSei").checked = false;
 }
 
 function checkedBoxNao() {
@@ -58,16 +62,19 @@ function checkedBoxNao() {
     cardSim.classList.remove("selected");
     let labelSim = document.getElementById("labelSim");
     labelSim.classList.remove("selected");
+    document.getElementById("checkedBoxSim").checked = false;
 
     let labelNao = document.getElementById("labelNao");
     labelNao.classList.toggle("selected");
     let cardNao = document.getElementById("cardNao");
     cardNao.classList.toggle("selected");
+    document.getElementById("checkedBoxNao").checked = true;
 
     let labelNaoSei = document.getElementById("labelNaoSei");
     labelNaoSei.classList.remove("selected");
     let cardNaoSei = document.getElementById("cardNaoSei");
     cardNaoSei.classList.remove("selected");
+    document.getElementById("checkedBoxNaoSei").checked = false;
 }
 
 function checkedBoxNaoSei() {
@@ -75,17 +82,20 @@ function checkedBoxNaoSei() {
     labelSim.classList.remove("selected");
     let cardSim = document.getElementById("cardSim");
     cardSim.classList.remove("selected");
+    document.getElementById("checkedBoxSim").checked = false;
 
 
     let labelNao = document.getElementById("labelNao");
     labelNao.classList.remove("selected");
     let cardNao = document.getElementById("cardNao");
     cardNao.classList.remove("selected");
+    document.getElementById("checkedBoxNao").checked = false;
 
     let labelNaoSei = document.getElementById("labelNaoSei");
     labelNaoSei.classList.toggle("selected");
     let cardNaoSei = document.getElementById("cardNaoSei");
     cardNaoSei.classList.toggle("selected");
+    document.getElementById("checkedBoxNaoSei").checked = true;
 }
 
 function abaAcertos() {
@@ -116,8 +126,11 @@ function abaErros() {
     erros.classList.remove("unselected");
 }
 
-
 var count = 0
+
+document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
+
+document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${arquiteturaTec.length}</h1>`
 
 function proxPergunta() {
     if (count + 1 < arquiteturaTec.length) {
@@ -138,14 +151,17 @@ function proxPergunta() {
     cardSim.classList.remove("selected");
     let labelSim = document.getElementById("labelSim");
     labelSim.classList.remove("selected");
+    document.getElementById("checkedBoxSim").checked = false;
     let labelNao = document.getElementById("labelNao");
     labelNao.classList.remove("selected");
     let cardNao = document.getElementById("cardNao");
     cardNao.classList.remove("selected");
+    document.getElementById("checkedBoxNao").checked = false;
     let labelNaoSei = document.getElementById("labelNaoSei");
     labelNaoSei.classList.remove("selected");
     let cardNaoSei = document.getElementById("cardNaoSei");
     cardNaoSei.classList.remove("selected");
+    document.getElementById("checkedBoxNaoSei").checked = false;
 
     if (count == arquiteturaTec.length - 1) {
         document.getElementById("finalizar").style.display = 'flex'

@@ -423,11 +423,6 @@ input, select, textarea {
 
 /* TELA PERFIL USINA */
 
-.historico {
-    display: flex;
-
-}
-
 .cardhistorico {
     background-color: white;
     width: 185px;
@@ -499,6 +494,47 @@ input, select, textarea {
     line-height: 20px;
     color: #202022;
 }
+
+.botoesperfil{
+    width: 169px;
+    height: 71px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoesperfil p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #0153FC;
+    margin-bottom: 0;
+}
+
+.mainPerfil{
+    width: 380px;
+    overflow-x: hidden;
+}
+
+.historico {
+    display: flex;
+    margin: auto;
+    height: 200px;
+    width: 500px;
+    overflow-x: scroll;
+}
+
+
 
 
 
@@ -811,7 +847,9 @@ textarea {
     height: 550px;
 }
 
-
+.space {
+    margin-bottom: 100px;
+}
 
 
 
