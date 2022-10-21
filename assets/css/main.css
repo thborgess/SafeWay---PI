@@ -95,6 +95,10 @@ h2 {
     color: #202022;
 }
 
+.descricao p{
+    width: 208px;
+}
+
 .botao {
     display: flex;
     justify-content: space-around;
@@ -129,8 +133,19 @@ h2 {
     background: #FFFFFF;
     border-radius: 10px;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.duvida {
+    margin: auto;
+    margin-bottom: 100px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #011C40;
 }
 
 nav {
@@ -303,13 +318,13 @@ label {
     color: #202022;
 }
 
-input, select {
+input, select, textarea {
     width: 340px;
     height: 55px;
     border: 1px solid #918E8E;
     border-radius: 10px;
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .btn {
@@ -675,7 +690,7 @@ button a {
     width: 33,3%;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     color:#858585;
 }
@@ -683,7 +698,7 @@ button a {
 .abaSelected {
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 18px;
     color:#000000;
     border-bottom: 3px solid #011C40;
@@ -692,6 +707,10 @@ button a {
 .acertos, .erros{
     margin-top: 300px;
     margin-bottom: 100px;
+}
+
+.unselected {
+    display: none;
 }
 
 .cardAcerto {
@@ -774,7 +793,16 @@ b a {
     color: white;
 }
 
+/* TELA DUVIDA */
 
+textarea {
+    width: 340px;
+    height: 170px;
+    border: 1px solid #918E8E;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+}
 
 
 /* TELA RANKING */

@@ -1,0 +1,40 @@
+{
+  "name": "Safeway",
+  "short_name": "Safeway",
+  "icons": [
+    {
+      "src": "images/icons/120.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#011C40",
+  "theme_color": "#FFFFFF"
+}

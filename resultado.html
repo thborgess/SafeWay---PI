@@ -41,18 +41,15 @@
                 </div>
             </div>
             <div class="barraRespostas">
-                <div class="abaRespostas abaSelected">
+                <div onclick="abaAcertos()" id="abaAcertos" class="abaRespostas abaSelected">
                     Acertos
                 </div>
-                <div class="abaRespostas ">
+                <div onclick="abaErros()" id="abaErros" class="abaRespostas ">
                     Erros
-                </div>
-                <div class="abaRespostas">
-                    Recomendaçoes
                 </div>
             </div>
         </div>
-        <div class="acertos" >
+        <div id="acertos" class="acertos" >
             <div class="cardAcerto">
                 <div class="questaoTitulo">
                     <img src="images/icons/correct.png" alt="">
@@ -70,7 +67,7 @@
                 <b>Ref.: <a href="https://bityli.com/wCtkzXtn">https://bityli.com/wCtkzXtn</a></b>
             </div>
         </div>
-        <div class="erros" style="display: none;">
+        <div id="erros" class="erros unselected">
             <div class="cardErro">
                 <div class="questaoTitulo">
                     <img src="images/icons/wrong.png" alt="">
@@ -99,5 +96,7 @@
             </div>
         </div>
     </nav>
+
+    <script src="assets/js/mainscript.js"></script>
 </body>
 </html>

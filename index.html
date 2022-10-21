@@ -15,6 +15,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- pwa -->
+
+    <meta name="description" content="SafeWay">
+	<link rel="manifest" href="manifest.json">
+  
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="msapplication-TileColor" content="#011C40">
+	<meta name="theme-color" content="#FFFFFF" />
+	<link rel="shortcut icon" sizes="196x196" href="images/icon/196.png">
+	<link rel="shortcut icon" sizes="120x120" href="images/icon/120.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/icon/120.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icon/180.png">
+	<link rel="apple-touch-icon" sizes="172x172" href="images/icon/172.png">
+
+	<link rel="icon" type="image/png" href="images/172.png">
 </head>
 <body>
     <header>
@@ -42,11 +58,11 @@
             <div id="editar">
                 <div class="botao">
                     <div class="icon">
-                        <img src="images/icons/edit-svgrepo-com-2.png" alt="">
+                        <img src="images/icons/usina-eletrica.png" alt="">
                     </div>
                     <div class="descricao">
-                        <h2>Editar</h2>
-                        <p>Edite as suas respostas de <br>acordo com cada área.</p>
+                        <h2>Usinas</h2>
+                        <p>Consulte o histórico de respostas da usina.</p>
                     </div>
                 </div>
             </div>
@@ -124,6 +140,7 @@
                 </div>
             </a>
         </div>
+        <a class="duvida" href="duvidas.html">Alguma dúvida? Clique aqui.</a>
     </main>
 
     <nav class="menuBar">
@@ -135,12 +152,41 @@
                 <a href="cadastro.html"><img src="images/icons/add-pngrepo-com.png" alt=""></a>
             </div>
             <div class="link">
-                <a href="selectusinas.html"><img src="images/icons/edit-svgrepo-com.png" alt=""></a>
+                <a href="selectusinas.html"><img src="images/icons/raio-usina.png" alt=""></a>
             </div>
             <div class="link">
                 <a href="ranking.html"><img src="images/icons/tables.png" alt=""></a>
             </div>
         </div>
     </nav>
+
+    <script>			
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js').then(reg => {
+            reg.addEventListener('updatefound', () => {
+              // A wild service worker has appeared in reg.installing!
+              newWorker = reg.installing;
+              newWorker.addEventListener('statechange', () => {
+                // Has network.state changed?
+                switch (newWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      // new update available
+                      showUpdateBar();
+                    }
+                    // No update available
+                    break;
+                }
+              });
+            });
+          });
+          let refreshing;
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            if (refreshing) return;
+            window.location.reload();
+            refreshing = true;
+          });
+        }
+      </script>
 </body>
 </html>

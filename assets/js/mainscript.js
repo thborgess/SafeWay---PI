@@ -88,6 +88,33 @@ function checkedBoxNaoSei() {
     cardNaoSei.classList.toggle("selected");
 }
 
+function abaAcertos() {
+    let abaAcertos = document.getElementById("abaAcertos");
+    abaAcertos.classList.add("abaSelected");
+
+    let abaErros= document.getElementById("abaErros");
+    abaErros.classList.remove("abaSelected");
+
+    let acertos= document.getElementById("acertos");
+    acertos.classList.remove("unselected");
+
+    let erros= document.getElementById("erros");
+    erros.classList.add("unselected");
+}
+
+function abaErros() {
+    let abaAcertos = document.getElementById("abaAcertos");
+    abaAcertos.classList.remove("abaSelected");
+
+    let abaErros= document.getElementById("abaErros");
+    abaErros.classList.add("abaSelected");
+
+    let acertos= document.getElementById("acertos");
+    acertos.classList.add("unselected");
+
+    let erros= document.getElementById("erros");
+    erros.classList.remove("unselected");
+}
 
 
 var count = 0
