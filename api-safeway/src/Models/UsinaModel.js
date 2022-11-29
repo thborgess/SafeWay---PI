@@ -8,7 +8,12 @@ const UsinaSchema = new Schema({
   nomeGestor: String,
   nomeUsina: String,
   endereço: String,
-  respostasArquitetura: Array
+  respostasArquitetura: Array,
+  respostasAcessos: Array,
+  respostasMonitoramento: Array,
+  respostasInventario: Array,
+  respostasGovernanca: Array,
+  respostasVulnerabilidade: Array
 });
 
 const UsinaModel = mongoose.model('usinas', UsinaSchema);
