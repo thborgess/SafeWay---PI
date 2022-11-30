@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 class UsinaController {
     async cadastrar(req, res) {
         const nomeUsina = req.body.nomeUsina;
+        console.log(nomeUsina)
 
         const usinaJaExiste = await UsinaModel.findOne({ nomeUsina });
 
@@ -13,10 +14,21 @@ class UsinaController {
             return res.status(400).json({ message: "Usina já existente"})
         } else {
             return res.status(200).json(cadastrarUsina)
-        }   
+        }  
+        
     }
+    
+    async show(req, res) {
+        const { id } = req.params;
 
+        const usina = await UsinaModel.findById(id);
 
+        if (!usina) {
+            return res.status(404).json({ message: "Usina não existente"})
+        } else {
+            return res.status(200).json(usina);
+        }
+    } 
 }
 
 module.exports = new UsinaController();

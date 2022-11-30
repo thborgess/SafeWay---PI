@@ -8,7 +8,7 @@ var arquiteturaTec = [
             "Resposta" :true
         },
         {         
-            "Pergunta" : "Há uma Zona Corporativa na rede? ",
+            "Pergunta" : "Há uma Zona Corporativa na rede?",
             "Resposta" :true
         },
         {         

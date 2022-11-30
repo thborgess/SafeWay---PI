@@ -7,7 +7,7 @@ const UsinaSchema = new Schema({
   UsinaID: ObjectId,
   nomeGestor: String,
   nomeUsina: String,
-  endereço: String,
+  endereco: String,
   respostasArquitetura: Array,
   respostasAcessos: Array,
   respostasMonitoramento: Array,

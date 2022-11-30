@@ -11,6 +11,7 @@ const VulnerabilidadeController = require('./Controllers/VulnerabilidadeControll
 const routes = Router();
 
 routes.post('/usinas', UsinaController.cadastrar);
+routes.get('/usinas:id', UsinaController.show);
 routes.post('/acessos', AcessosController.criar);
 routes.post('/arquitetura', ArquiteturaController.criar);
 routes.post('/arquitetura', GovernancaController.criar);

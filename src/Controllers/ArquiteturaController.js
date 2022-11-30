@@ -6,6 +6,8 @@ class ArquiteturaController {
 
         return res.status(200).json(criarQuestao)
     }
+
+    
 }
 
 module.exports = new ArquiteturaController();
