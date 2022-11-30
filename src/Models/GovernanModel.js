@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
-const VulnerabilidadeSchema = new Schema({
+const GovernancaSchema = new Schema({
   ID: ObjectId,
   questaoID: Number,
   enunciado: String,
@@ -11,6 +11,6 @@ const VulnerabilidadeSchema = new Schema({
   recomendacao: String
 });
 
-const VulnerabilidadeModel = mongoose.model('questoes governanca', VulnerabilidadeSchema);
+const GovernancaModel = mongoose.model('questoes governança', GovernancaSchema);
 
-module.exports = VulnerabilidadeModel;
+module.exports = GovernancaModel;
