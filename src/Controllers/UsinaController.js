@@ -19,14 +19,18 @@ class UsinaController {
     }
     
     async show(req, res) {
-        const { id } = req.params;
+        try {
+            const { id } = req.params;
 
-        const usina = await UsinaModel.findById(id);
+            const usina = await UsinaModel.findById(id);
 
-        if (!usina) {
-            return res.status(404).json({ message: "Usina não existente"})
-        } else {
-            return res.status(200).json(usina);
+            if (!usina) {
+                return res.status(404).json({ message: "Usina não existente"})
+            } else {
+                return res.status(200).json(usina);
+            }
+        } catch (err) { 
+            return res.status(404).json({ message: "ID errada"})
         }
     } 
 }
