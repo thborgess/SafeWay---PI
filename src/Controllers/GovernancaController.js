@@ -1,4 +1,4 @@
-const GovernancaModel = require('../Models/GovernancaModel');
+const GovernancaModel = require('../Models/GovernanModel');
 
 class GovernancaController {
     async criar(req, res) {

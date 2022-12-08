@@ -29,7 +29,7 @@ var arquiteturaTec = [
         }
 ]
 
-
+/* FUNÇÕES */
 
 function arquiteturaTec() {
     var area = "Arquitetura Tecnológica"
@@ -174,8 +174,6 @@ function proxPergunta() {
     let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
 
     document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`
-
-    console.log(count)
 }
 
 function antPergunta() {
@@ -205,3 +203,66 @@ function antPergunta() {
 
     console.log(count)
 }
+
+/* funções API */
+
+function cadastrarUsina() {
+    const nomeGestor =  document.getElementById("nomeGestor").value
+    const nomeUsina =  document.getElementById("nomeUsina").value
+    const endereco =  document.getElementById("endereco").value
+
+    const usina = {nomeGestor, nomeUsina, endereco}
+
+    const options = {
+        method: "POST",
+        headers: new Headers ({ 'content-type': 'application/json' }),
+        body: JSON.stringify(usina) 
+    }
+
+    fetch("http://localhost:3000/api/usinas", options).then(res=> {
+        console.log(res);
+    })
+}
+
+function contarRespostaArquitetura() {
+    const resposta = document.querySelector('.form-check-input:checked').value;
+    
+    const respostasArquitetura = [];
+
+    respostasArquitetura.push(resposta);
+
+    const options = {
+        method: "PUT",
+        headers: new Headers ({ 'content-type': 'application/json' }),
+        body: JSON.stringify(respostasArquitetura)
+    }
+
+    fetch("http://localhost:3000/api/usinas", options).then(res=> {
+        console.log(res);
+    })
+}
+
+async function listar() {
+    const retorno = await fetch("http://localhost:3000/api/usinaslist");
+    const usinas = await retorno.json();
+    
+    console.log(usinas);
+}
+
+listar();
+
+/* organizador */
+
+function botaoProxPergunta() {
+    contarRespostaArquitetura();
+    proxPergunta();
+}
+
+function aposCadastrar() {
+    cadastrarUsina();
+
+    const nomeusinah1 =  document.getElementById("nomeUsina").value
+   
+    document.getElementById("nomeusinah1").innerHTML = `<h1>${nomeusinah1}</h1>`;   
+}
+
