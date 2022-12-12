@@ -1,9 +1,9 @@
-<h1 align="center"> 🔒 SafeWay 🔒 </h1> <br>
-<p align="center">
+<h1 align = "center"> 🔒 SafeWay 🔒 </h1> <br>
+<p align = "center">
     <img alt="SafeWay" title="Logo" src="https://user-images.githubusercontent.com/93235055/207123160-89de172b-5a0d-48a0-bfa1-fb58be3a4422.png" width="450">
 </p>
 
-<p align="center">
+<p align = "center">
   Aplicativo para mapeamento da segurança digital de usinas hidrelétricas.
 </p>
 
@@ -17,7 +17,7 @@
 
 ## Introdução
 
-<p align="center">
+<p align = "center">
   <img src = "https://user-images.githubusercontent.com/93235055/207127691-a54de01d-b90a-498c-b79f-6762aaeea71c.png" width=350>
 </p>
 
@@ -25,14 +25,12 @@
 
 ## Tecnologias Utilizadas
 
-
-* <img src = "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-* <img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-* <img src = "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
-* <img src = "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
-* <img src = "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-* <img src = "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
-
+- <img src = "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+- <img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+- <img src = "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+- <img src = "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+- <img src = "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+- <img src = "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
 
 <br>
 
