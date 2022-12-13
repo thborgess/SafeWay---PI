@@ -39,36 +39,36 @@
 <table>
   <tr>
     <td align="center">
-      <a href=" target="_blank">
-        <img src="" width="100px;" alt="Foto do Gabriel"/><br>
+      <a href="https://github.com/gabrsferr" target="_blank">
+        <img src="https://user-images.githubusercontent.com/93235055/207221529-289eedff-f4e9-4124-9cac-e32efbf15dc7.jpg" width="100px;" alt="Foto do Gabriel"/><br>
         <sub>
           <b>Gabriel Ferreira</b>
         </sub>
       </a>
       <td align="center">
-      <a href="" target="_blank">
-        <img src="" width="100px;" alt="Foto do João"/><br>
+      <a href="https://github.com/Jo4oV1ctorr" target="_blank">
+        <img src="https://user-images.githubusercontent.com/93235055/207212423-cd45e978-8a3e-446c-8420-c0207865d6d6.jpg" width="100px;" alt="Foto do João"/><br>
         <sub>
           <b>João Felix</b>
         </sub>
       </a>
       <td align="center">
       <a href="https://github.com/MEduardaOl" target="_blank">
-        <img src="https://user-images.githubusercontent.com/93235055/207135066-7967898e-d0c3-4314-abdd-abfe290d18a8.png" width="100px;" alt="Foto da Duda"/><br>
+        <img src="https://user-images.githubusercontent.com/93235055/207213160-4150196b-6102-4e30-a0d1-ad3471f813aa.jpg" width="100px;" alt="Foto da Duda"/><br>
         <sub>
-          <b>Maria Eduarda Olímpio</b>
+          <b>Maria Eduarda Olímpio</br>
         </sub>
       </a>
       <td align="center">
-      <a href="" target="_blank">
-        <img src="" width="100px;" alt="Foto da Vivi"/><br>
+      <a href="https://github.com/MariV24" target="_blank">
+        <img src="https://user-images.githubusercontent.com/93235055/207211504-03aef402-441d-4773-92af-fedcfee18b46.jpg" width="100px;" alt="Foto da Vivi"/><br>
         <sub>
           <b>Maria Vitória</b>
         </sub>
       </a>
       <td align="center">
-      <a href="" target="_blank">
-        <img src="" width="100px;" alt="Foto do Thales"/><br>
+      <a href="https://github.com/Thaleshsb" target="_blank">
+        <img src="https://user-images.githubusercontent.com/93235055/207211672-fcd01181-e39b-49b0-967a-6bd11dd05af4.jpg" width="100px;" alt="Foto do Thales"/><br>
         <sub>
           <b>Thales Barbosa</b>
         </sub>
@@ -82,6 +82,7 @@
       </a>
   </tr>
 </table>
+
 
 
 
