@@ -19,7 +19,7 @@
 </head>
 <body>
     <header  class="secoes">
-        <h1>Arquitetura Tecnológica</h1>
+        <h1>Inventário de Ativos</h1>
         <div class="barratitulo">
             <a href="areas.html">
                 <img src="images/icons/x-saida.png" alt="saida">
@@ -34,7 +34,7 @@
                 aria-valuemin="0" aria-valuemax="60" style="width:0%"></div>
         </div>
         <div class="cardQuestoes">
-            <div class="enunciado" id="enunciado">
+            <div class="enunciado inventario" id="enunciado">
                 <p></p>
             </div>
             <div class="alternativas">
@@ -65,15 +65,15 @@
             </div>
         </div>
         <div id="botoesPergunta" class="botoesPergunta">
-            <button onclick="antPergunta()" id="anterior" type="button" href="" class="btn btn-primary botao-questao" style="display: none;">Anterior</button>
+            <button onclick="antPerguntaInventario()" id="anterior" type="button" href="" class="btn btn-primary botao-questao" style="display: none;">Anterior</button>
 
-            <button onclick="botaoProxPergunta()" id="proximo" type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
+            <button onclick="proxPerguntaInventario()" id="proximo" type="button" href="resultado.html" class="btn btn-primary botao-questao">Próximo</button>
             
-            <button onclick="botaoProxPergunta()" id="finalizar" type="button" href="resultado.html" class="btn btn-primary botao-questao" style="display: none;"><a href='resultado.html'>Finalizar</a></button>
+            <button onclick="proxPerguntaInventario()" id="finalizar" type="button" href="resultado.html" class="btn btn-primary botao-questao" style="display: none;"><a href='resultado.html'>Finalizar</a></button>
         </div>
     </main>
 
     <script src="assets/js/mainscript.js"></script>
-    <script src="assets/js/scriptaRespostas.js"></script>
+    <script src="assets/js/scriptinventario.js"></script>
 </body>
 </html>

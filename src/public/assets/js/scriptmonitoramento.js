@@ -1,0 +1,92 @@
+var monitorTec = [
+    {  
+        "Pergunta" : "Os ativos do ARCiber estão configurados para gerar logs de segurança apropriados para dar suporte a investigações e a reconstrução de possíveis incidentes de segurança?",
+        "Resposta" :true
+    },
+    {   
+        "Pergunta" : "Os dispositivos de segurança como Firewalls, IDS/IPS, Antimalware e subsistemas de autenticação estão configurados para gerar alertas caso identifiquem atividades suspeitas?",
+        "Resposta" :true
+    },
+    {   
+        "Pergunta" : "As regras para geração de alertas são revisadas periodicamente?",
+        "Resposta" :true
+    }
+]
+
+var count = 0
+
+document.getElementById("enunciado").innerHTML = `<p>${monitorTec[count].Pergunta}</p>`;
+
+document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${monitorTec.length}</h1>`
+
+function proxPerguntaMonitor() {
+    if (count + 1 < monitorTec.length) {
+        count += 1
+    };
+
+    document.getElementById("enunciado").innerHTML = `<p>${monitorTec[count].Pergunta}</p>`;
+
+    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${monitorTec.length}</h1>`
+
+
+    if (count != 0) {
+        document.getElementById("botoesPergunta").style.justifyContent = 'space-between'
+        document.getElementById("anterior").style.display = 'flex'
+    }
+
+    let cardSim = document.getElementById("cardSim");
+    cardSim.classList.remove("selected");
+    let labelSim = document.getElementById("labelSim");
+    labelSim.classList.remove("selected");
+    document.getElementById("checkedBoxSim").checked = false;
+    let labelNao = document.getElementById("labelNao");
+    labelNao.classList.remove("selected");
+    let cardNao = document.getElementById("cardNao");
+    cardNao.classList.remove("selected");
+    document.getElementById("checkedBoxNao").checked = false;
+    let labelNaoSei = document.getElementById("labelNaoSei");
+    labelNaoSei.classList.remove("selected");
+    let cardNaoSei = document.getElementById("cardNaoSei");
+    cardNaoSei.classList.remove("selected");
+    document.getElementById("checkedBoxNaoSei").checked = false;
+
+    if (count == monitorTec.length - 1) {
+        document.getElementById("finalizar").style.display = 'flex'
+        document.getElementById("proximo").style.display = 'none'
+    } else {
+        document.getElementById("finalizar").style.display = 'none'
+        document.getElementById("proximo").style.display = 'flex'
+    }
+
+    let porcentoBarra = (count + 1) / monitorTec.length * 100;
+
+    document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`
+}
+
+function antPerguntaMonitor() {
+    if (count > 0) {
+        count -= 1
+    }
+
+    if (count == 0) {
+        document.getElementById("botoesPergunta").style.justifyContent = 'flex-end'
+        document.getElementById("anterior").style.display = 'none'
+    }
+
+    console.log(count)
+
+    document.getElementById("enunciado").innerHTML = `<p>${monitorTec[count].Pergunta}</p>`;
+
+    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${monitorTec.length}</h1>`
+
+    if (count != monitorTec.length - 1) {
+        document.getElementById("finalizar").style.display = 'none'
+        document.getElementById("proximo").style.display = 'flex'
+    }
+
+    let porcentoBarra = (count + 1) / monitorTec.length * 100;
+
+    document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`;
+
+    console.log(count)
+}

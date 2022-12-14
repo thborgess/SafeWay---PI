@@ -28,7 +28,7 @@ header {
 
 header h1{
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     margin-left: 30px;
 }
 
@@ -386,28 +386,8 @@ input, select, textarea {
     margin-top: 15px;
 }
 
-#inventario {
-    background-color: #2C5BA8;
-}
-
-#acesso {
-    background-color: #A457BF;
-}
-
-#governanca {
-    background-color: #F5953B;
-}
-
 #governanca p {
     font-size: 13px;
-}
-
-#vulnerabilidade {
-    background-color: #2393D9;
-}
-
-#monitoramento {
-    background-color: #E66267;
 }
 
 #monitoramento p {
@@ -526,6 +506,19 @@ input, select, textarea {
     overflow-x: hidden;
 }
 
+.grafico {
+    margin: auto;
+    width: 358px;
+    height: 247px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .historico {
     display: flex;
     margin: auto;
@@ -584,7 +577,7 @@ input, select, textarea {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 32px;
     text-align: center;
     color: #FFFFFF;
@@ -851,7 +844,27 @@ textarea {
     margin-bottom: 100px;
 }
 
+/* cores */ 
 
+#inventario, .inventario {
+    background-color: #2C5BA8;
+}
+
+#acesso, .acesso {
+    background-color: #A457BF;
+}
+
+#governanca, .governo {
+    background-color: #F5953B;
+}
+
+#vulnerabilidade, .gestao {
+    background-color: #2393D9;
+}
+
+#monitoramento, .monitor {
+    background-color: #E66267;
+}
 
 
 /* progessive bar */

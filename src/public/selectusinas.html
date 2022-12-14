@@ -16,6 +16,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!--script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="assets/js/mainscript.js"></script>
 </head>
 <body>
     <header  class="secoes">
@@ -28,19 +32,14 @@
     </header>
 
     <main>
-        <h1 class="h1cadastro">Selecione uma usina:</h1>
+        <h1 class="h1cadastro" onclick="listarUsinas()">Selecione uma usina:</h1>
         <div class="formulario">
             <form>
                 <select name="usinas" id="usinas">
-                    <option value="Usina Santa Clara">Usina Santa Clara</option>
-                    <option value="Usina Itapebi">Usina Itapebi</option>
-                    <option value="Usina Tabajara">Usina Tabajara</option>
-                    <option value="sina Porto Estrela">Usina Porto Estrela</option>
-                    <option value="Usina Lajeado">Usina Lajeado</option>
                 </select>
                 <div class="botao">
                     <a href="perfilusina.html">
-                        <button type="button" href="" class="btn btn-primary">Confirmar</button>
+                        <button type="button" href="" class="btn btn-primary" onclick="selecionarUsina()">Confirmar</button>
                     </a>
                 </div>  
             </form>
@@ -63,5 +62,26 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        async function listarUsinas() {
+            const response = await fetch("http://localhost:3000/api/usinaslist");
+
+            console.log(typeof response);
+
+            const usinas = await response.json();
+            const data = usinas.usinas
+
+            console.log(typeof usinas); 
+
+
+
+            data.map((usina) => {
+                $('#usinas').append(`<option id="usinaselecionada" value='${usina._id}'>${usina.nomeUsina}</option>`);
+            });
+        }
+
+        listarUsinas();
+    </script>
 </body>
 </html>

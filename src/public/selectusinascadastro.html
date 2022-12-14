@@ -18,11 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
     <!--script-->
-    <script src="assets/js/mainscript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="assets/js/mainscript.js"></script>
 </head>
 <body>
     <header  class="secoes">
-        <h1>Cadastro</h1>
+        <h1>Usinas</h1>
         <div class="barratitulo">
             <a href="index.html">
                 <img src="images/icons/x-saida.png" alt="saida">
@@ -31,18 +32,14 @@
     </header>
 
     <main>
-        <h1 onclick="listarUsinas()" class="h1cadastro">Informe os dados sobre a usina:</h1>
+        <h1 class="h1cadastro" onclick="listarUsinas()">Selecione uma usina:</h1>
         <div class="formulario">
             <form>
-                <label for="fname">Nome do gestor:</label><br>
-                <input type="text" id="nomeGestor" name="fname"><br>
-                <label for="lname">Nome da usina:</label><br>
-                <input type="text" id="nomeUsina" name="lname"><br>
-                <label for="lname">Endereço:</label><br>
-                <input type="text" id="endereco" name="lname"> 
+                <select name="usinas" id="usinas">
+                </select>
                 <div class="botao">
-                    <a href="selectusinascadastro.html">
-                        <button onclick="aposCadastrar()" type="button" href="" class="btn btn-primary">Cadastrar</button>
+                    <a href="areas.html">
+                        <button type="button" href="" class="btn btn-primary" onclick="selecionarUsina()">Confirmar</button>
                     </a>
                 </div>  
             </form>
@@ -55,10 +52,10 @@
                 <a href="index.html"><img src="images/icons/home-svgrepo-com.png" alt=""></a>
             </div>
             <div class="link">
-                <a href=""><img src="images/icons/add-pngrepo-com.png" alt=""></a>
+                <a href="cadastro.html"><img src="images/icons/add-pngrepo-com.png" alt=""></a>
             </div>
             <div class="link">
-                <a href="selectusinas.html"><img src="images/icons/raio-usina.png" alt=""></a>
+                <a href=""><img src="images/icons/raio-usina.png" alt=""></a>
             </div>
             <div class="link">
                 <a href="ranking.html"><img src="images/icons/tables.png" alt=""></a>
@@ -66,6 +63,25 @@
         </div>
     </nav>
 
-    <script src="assets/js/mainscript.js"></script>
+    <script>
+        async function listarUsinas() {
+            const response = await fetch("http://localhost:3000/api/usinaslist");
+
+            console.log(typeof response);
+
+            const usinas = await response.json();
+            const data = usinas.usinas
+
+            console.log(typeof usinas); 
+
+
+
+            data.map((usina) => {
+                $('#usinas').append(`<option id="usinaselecionada" value='${usina._id}'>${usina.nomeUsina}</option>`);
+            });
+        }
+
+        listarUsinas();
+    </script>
 </body>
 </html>

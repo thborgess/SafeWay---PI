@@ -130,7 +130,7 @@ var count = 0
 
 document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
 
-document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${arquiteturaTec.length}</h1>`
+document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${arquiteturaTec.length}</h1>` 
 
 function proxPergunta() {
     if (count + 1 < arquiteturaTec.length) {
@@ -204,7 +204,42 @@ function antPergunta() {
     console.log(count)
 }
 
+function saveName(){
+    const nomeUsina = document.getElementById("nomeUsina").value
+    localStorage.setItem('name', nomeUsina) 
+    sayMyName();
+}
+
+function removeName(){
+    if(localStorage.getItem('name')){
+        localStorage.removeItem('name');
+    }
+}
+
+function selecionarDadosUsina() {
+    const idUsinaSelect = document.getElementById("usinas").value;
+
+    if(localStorage.getItem('id')){
+        localStorage.removeItem('id');
+    } 
+
+    localStorage.setItem('id', idUsinaSelect)
+    localStorage.setItem('name', nomeUsinaSelect)
+}
+
 /* funções API */
+
+async function showUsinaNome() {
+    const idSelected = localStorage.getItem("id")
+
+    const response = await fetch("http://localhost:3000/api/usinas/" + idSelected);
+
+    const usina = await response.json();
+
+
+
+    document.getElementById("nomeusinah1").innerHTML = `<h1> ${usina.nomeUsina} </h1>`; 
+}
 
 function cadastrarUsina() {
     const nomeGestor =  document.getElementById("nomeGestor").value
@@ -224,34 +259,26 @@ function cadastrarUsina() {
     })
 }
 
-function contarRespostaArquitetura() {
-    const resposta = document.querySelector('.form-check-input:checked').value;
-    
-    const respostasArquitetura = [];
 
-    respostasArquitetura.push(resposta);
+async function listarUsinas() {
+    const response = await fetch("http://localhost:3000/api/usinaslist");
 
-    const options = {
-        method: "PUT",
-        headers: new Headers ({ 'content-type': 'application/json' }),
-        body: JSON.stringify(respostasArquitetura)
-    }
+    console.log(response);
 
-    fetch("http://localhost:3000/api/usinas", options).then(res=> {
-        console.log(res);
-    })
+    const usinas = await response.json();
+
+    console.log(usinas); 
+
+    usinas.map((usina) => {
+        $('#select2').append(`<option value='${usina.nomeUsina}'>${usina.nomeUsina}</option>`);
+      });
 }
-
-async function listar() {
-    const retorno = await fetch("http://localhost:3000/api/usinaslist");
-    const usinas = await retorno.json();
-    
-    console.log(usinas);
-}
-
-listar();
 
 /* organizador */
+function selecionarUsina() {
+    selecionarDadosUsina();
+}
+
 
 function botaoProxPergunta() {
     contarRespostaArquitetura();
@@ -260,9 +287,10 @@ function botaoProxPergunta() {
 
 function aposCadastrar() {
     cadastrarUsina();
-
-    const nomeusinah1 =  document.getElementById("nomeUsina").value
-   
-    document.getElementById("nomeusinah1").innerHTML = `<h1>${nomeusinah1}</h1>`;   
+    removeName();
+    saveName();
 }
+
+
+
 
