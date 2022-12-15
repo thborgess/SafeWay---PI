@@ -846,7 +846,7 @@ textarea {
 
 /* cores */ 
 
-#inventario, .inventario {
+#inventario, .inventario{
     background-color: #2C5BA8;
 }
 
@@ -864,6 +864,46 @@ textarea {
 
 #monitoramento, .monitor {
     background-color: #E66267;
+}
+
+.histInventario p{
+    color: #2C5BA8;
+}
+
+.histInventario .iconCard {
+    border: 2px solid #2C5BA8
+}
+
+.histAcessos p{
+    color: #A457BF;
+}
+
+.histAcessos .iconCard {
+    border: 2px solid #A457BF
+}
+
+.histGoverno p{
+    color: #F5953B;
+}
+
+.histGoverno .iconCard {
+    border: 2px solid #F5953B
+}
+
+.histVulneravel p{
+    color: #2393D9;
+}
+
+.histVulneravel .iconCard {
+    border: 2px solid #2393D9
+}
+
+.histMonitor p{
+    color: #E66267;
+}
+
+.histMonitor .iconCard {
+    border: 2px solid #E66267
 }
 
 

@@ -19,7 +19,8 @@ const UsinaSchema = new Schema({
   pontuacaoMonitoramento: Number,
   pontuacaoInventario: Number,
   pontuacaoGovernanca: Number,
-  pontuacaoVulnerabilidade: Number
+  pontuacaoVulnerabilidade: Number,
+  pontuacaoGeral: Number
 });
 
 const UsinaModel = mongoose.model('usinas', UsinaSchema);

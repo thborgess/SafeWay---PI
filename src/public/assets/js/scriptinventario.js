@@ -152,6 +152,111 @@ async function updateResInventario() {
     })
 }
 
+// Validar respostasInventario
+
+async function validarRespostas() {
+    const idSelected = localStorage.getItem("id")
+
+    const response = await fetch("http://localhost:3000/api/usinas/" + idSelected);
+
+    const usina = await response.json();
+
+    const respostasInventario = usina.respostasInventario;
+
+
+    respostasCorretas = [];
+    respostasErradas = [];
+
+    for (let i = 0; i < respostasInventario.length; i++) {
+        if (respostasInventario[i] == "true") {
+            respostasCorretas.push({ "num" : i, "resposta" : respostasInventario[i] });
+        } else {
+            respostasErradas.push({ "num" : i, "resposta" : respostasInventario[i] });
+        }
+    } 
+
+    console.log(respostasCorretas);
+    console.log(respostasErradas);
+
+
+    for (let i = 0; i < respostasCorretas.length; i++) {
+        let html = `
+        <div class="cardAcerto">
+            <div class="questaoTitulo">
+                <img src="images/icons/correct.png" alt="">
+                <h1>Questão ${respostasCorretas[i].num + 1}</h1>
+            </div>
+            <p>Um sistema supervisório permite que sejam monitoradas e rastreadas informações de um processo produtivo ou instalação física.</p>
+            <b>Ref.: <a href="https://bityli.com/wCtkzXtn">https://bityli.com/wCtkzXtn</a></b>
+        </div>
+        `
+
+        let cardAcerto = document.createElement('div');
+        cardAcerto.innerHTML = html;
+        document.getElementById('acertos').appendChild(cardAcerto);
+    }
+
+    for (let i = 0; i < respostasErradas.length; i++) {
+        let html = `
+        <div class="cardErro">
+            <div class="questaoTitulo">
+                <img src="images/icons/wrong.png" alt="">
+                <h1>Questão ${respostasErradas[i].num + 1}</h1>
+            </div>
+            <p>Um sistema supervisório permite que sejam monitoradas e rastreadas informações de um processo produtivo ou instalação física.</p>
+            <b>Ref.: <a href="https://bityli.com/wCtkzXtn">https://bityli.com/wCtkzXtn</a></b>
+        </div>
+        `
+
+        let cardAcerto = document.createElement('div');
+        cardAcerto.innerHTML = html;
+        document.getElementById('erros').appendChild(cardAcerto);
+    }
+
+    const pontuacaoInventario = (respostasCorretas.length / respostasInventario.length) * 10
+
+    console.log(pontuacaoInventario.toFixed(1));
+
+    document.getElementById("nota").innerHTML = `<p class="nota">${pontuacaoInventario.toFixed(1)}/10</p>`;
+
+
+    const pontuacao = { pontuacaoInventario: pontuacaoInventario.toFixed(1) };
+
+    const options = {
+        method: "PUT",
+        headers: new Headers ({ 'content-type': 'application/json' }),
+        body: JSON.stringify(pontuacao) 
+    }
+
+    fetch("http://localhost:3000/api/usinasPontInventario/" + idSelected, options).then(res=> {
+        console.log(res);
+    })
+}
+
+async function contarRespostaGeral() {
+
+    id = localStorage.getItem('id');
+
+    const response = await fetch("http://localhost:3000/api/usinas/" + id);
+
+    const usina = await response.json();
+
+    const pontuacaoGeral = usina.pontuacaoArquitetura + usina.pontuacaoInventario + usina.pontuacaoAcessos + usina.pontuacaoMonitoramento + usina.pontuacaoGovernanca + usina.pontuacaoVulnerabilidade;
+
+
+    const resposta = { pontuacaoGeral: pontuacaoGeral };
+
+    const options = {
+        method: "PUT",
+        headers: new Headers ({ 'content-type': 'application/json' }),
+        body: JSON.stringify(resposta) 
+    }
+
+    fetch("http://localhost:3000/api/usinasPontGeral/" + id, options).then(res=> {
+        console.log(res);
+    })
+}
+
 //Gerenciador
 
 function gerenciadorProxPergunta() {

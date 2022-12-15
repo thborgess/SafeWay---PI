@@ -21,6 +21,15 @@ routes.put('/usinasInventario/:id', UsinaController.updateRespostaInventario);
 routes.put('/usinasGovernanca/:id', UsinaController.updateRespostaGovernanca);
 routes.put('/usinasVulnerabilidade/:id', UsinaController.updateRespostaVulnerabilidade);
 
+routes.put('/usinasPontArq/:id', UsinaController.updatePontArq);
+routes.put('/usinasPontAcessos/:id', UsinaController.updatePontAcessos);
+routes.put('/usinasPontMonitor/:id', UsinaController.updatePontMonitor);
+routes.put('/usinasPontInventario/:id', UsinaController.updatePontInvent);
+routes.put('/usinasPontGovern/:id', UsinaController.updatePontGov);
+routes.put('/usinasPontVulneral/:id', UsinaController.updatePontVulneral);
+routes.put('/usinasPontGeral/:id', UsinaController.updatePontGeral);
+
+
 
 routes.post('/acessos', AcessosController.criar);
 routes.post('/arquitetura', ArquiteturaController.criar);

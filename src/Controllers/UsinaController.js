@@ -112,6 +112,99 @@ class UsinaController {
         }
     }
 
+
+
+    async updatePontArq(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoArquitetura } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontAcessos(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoAcessos } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontMonitor(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoMonitoramento } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontInvent(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoInventario } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontGov(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoGovernanca } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontVulneral(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoVulnerabilidade } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
+    async updatePontGeral(req, res) {
+        try {
+            const { id } = req.params;
+            const { pontuacaoGeral } = req.body;
+
+            await UsinaModel.findByIdAndUpdate(id, req.body);
+
+            return res.status(200).json({ message: "Resposta atualizada" });
+        } catch (error) {
+            return res.status(404).json({ message: "Erro ao atualizar" });
+        }
+    }
+
     async list (req, res) {
         const usinas =  await UsinaModel.find();
 

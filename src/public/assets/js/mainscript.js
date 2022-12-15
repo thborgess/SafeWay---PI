@@ -139,6 +139,22 @@ async function showUsinaNome() {
     document.getElementById("nomeusinah1").innerHTML = `<h1> ${usina.nomeUsina} </h1>`; 
 }
 
+async function showPontuacao() {
+    const idSelected = localStorage.getItem("id")
+
+    const response = await fetch("http://localhost:3000/api/usinas/" + idSelected);
+
+    const usina = await response.json();
+
+    document.getElementById("nomeusinah1").innerHTML = `<h1> ${usina.nomeUsina} </h1>`; 
+    document.getElementById("pontuacaoArquitetura").innerHTML = `<p>Pontuação: ${usina.pontuacaoArquitetura} </p>`;
+    document.getElementById("pontuacaoInventario").innerHTML = `<p>Pontuação: ${usina.pontuacaoInventario} </p>`;  
+    document.getElementById("pontuacaoAcessos").innerHTML = `<p>Pontuação: ${usina.pontuacaoAcessos} </p>`; 
+    document.getElementById("pontuacaoGoverno").innerHTML = `<p>Pontuação: ${usina.pontuacaoGovernanca} </p>`; 
+    document.getElementById("pontuacaoVulneravel").innerHTML = `<p>Pontuação: ${usina.pontuacaoVulnerabilidade} </p>`; 
+    document.getElementById("pontuacaoMonitor").innerHTML = `<p>Pontuação: ${usina.pontuacaoMonitoramento} </p>`; 
+}
+
 function cadastrarUsina() {
     const nomeGestor =  document.getElementById("nomeGestor").value;
     const nomeUsina =  document.getElementById("nomeUsina").value;
@@ -149,8 +165,9 @@ function cadastrarUsina() {
     const pontuacaoInventario= 0;
     const pontuacaoGovernanca= 0;
     const pontuacaoVulnerabilidade= 0;
+    const pontuacaoGeral = 0;
 
-    const usina = {nomeGestor, nomeUsina, endereco, pontuacaoArquitetura, pontuacaoAcessos, pontuacaoMonitoramento, pontuacaoVulnerabilidade, pontuacaoInventario, pontuacaoGovernanca}
+    const usina = {nomeGestor, nomeUsina, endereco, pontuacaoArquitetura, pontuacaoAcessos, pontuacaoMonitoramento, pontuacaoVulnerabilidade, pontuacaoInventario, pontuacaoGovernanca, pontuacaoGeral}
 
     const options = {
         method: "POST",
@@ -162,6 +179,7 @@ function cadastrarUsina() {
         console.log(res);
     })
 }
+
 
 
 

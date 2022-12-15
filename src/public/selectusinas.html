@@ -94,12 +94,16 @@
             selecionarDadosUsina();
             const idSelected = localStorage.getItem("id")
 
-            fetch("http://localhost:3000/api/usinasdelete/" + idSelected);
+            fetch('http://localhost:3000/api/usinasdelete/' + idSelected, {
+                method: 'DELETE',
+            })
+            .then(res => res.text()) // or res.json()
+            .then(res => console.log(res))
 
             let usinadelete = document.getElementById("usinadelete");
             usinadelete.classList.remove("cover");
             
-            listarUsinas();
+            window.location.reload(false);
         }
 
         listarUsinas();

@@ -19,7 +19,7 @@
 
     <script src="assets/js/mainscript.js"></script>
     <script>
-        showUsinaNome();
+        showPontuacao();
     </script>
 </head>
 <body>
@@ -33,7 +33,7 @@
     </header>
 
     <main class="mainPerfil">
-        <h1 class="h1cadastro">Selecione uma usina:</h1>
+        <h1 class="h1cadastro">Histórico:</h1>
         <div class="historico">
                 <div class="cardhistorico">
                     <div class="areaHistorico">
@@ -44,50 +44,91 @@
                     </div>
                     <div class="dadoHistorico">
                         <p id="dataHistorico">Data: 05/10/2022 </p>
-                        <p id="pontuacaoHistorico">Pontuação: 8.5</p>
+                        <p id="pontuacaoArquitetura">Pontuação: 8.5</p>
                     </div>
                 </div>
     
                 <div class="cardhistorico">
-                    <div class="areaHistorico">
+                    <div class="areaHistorico histInventario">
                         <div class="iconCard">
-                            <img src="images/icons/engineer-verde.png" alt="">
+                            <img src="images/icons/stock-azul.png" alt="">
                         </div>
-                        <p>Área: Arquitetura Tecnológica</p>
+                        <p>Área: Inventário de Ativos</p>
                     </div>
                     <div class="dadoHistorico">
                         <p id="dataHistorico">Data: 05/10/2022 </p>
-                        <p id="pontuacaoHistorico">Pontuação: 8.5</p>
+                        <p id="pontuacaoInventario">Pontuação: 8.5</p>
+                    </div>
+                </div>
+
+                <div class="cardhistorico">
+                    <div class="areaHistorico histAcessos">
+                        <div class="iconCard">
+                            <img src="images/icons/key-sroxo.png" alt="">
+                        </div>
+                        <p>Área: Gestão de Acessos</p>
+                    </div>
+                    <div class="dadoHistorico">
+                        <p id="dataHistorico">Data: 05/10/2022 </p>
+                        <p id="pontuacaoAcessos">Pontuação: 8.5</p>
+                    </div>
+                </div>
+    
+                <div class="cardhistorico">
+                    <div class="areaHistorico histGoverno">
+                        <div class="iconCard">
+                            <img src="images/icons/boss-laranja.png" alt="">
+                        </div>
+                        <p>Área: Governança de S.I</p>
+                    </div>
+                    <div class="dadoHistorico">
+                        <p id="dataHistorico">Data: 05/10/2022 </p>
+                        <p id="pontuacaoGoverno">Pontuação: 8.5</p>
+                    </div>
+                </div>
+
+                <div class="cardhistorico">
+                    <div class="areaHistorico histVulneravel">
+                        <div class="iconCard">
+                            <img src="images/icons/safety-azul-claro.png" alt="">
+                        </div>
+                        <p>Área: Gestão de Vulnerabilidades</p>
+                    </div>
+                    <div class="dadoHistorico">
+                        <p id="dataHistorico">Data: 05/10/2022 </p>
+                        <p id="pontuacaoVulneravel">Pontuação: 8.5</p>
+                    </div>
+                </div>
+
+                <div class="cardhistorico">
+                    <div class="areaHistorico histMonitor">
+                        <div class="iconCard">
+                            <img src="images/icons/eye-rosa.png" alt="">
+                        </div>
+                        <p>Área: Monitoramento e Respostas</p>
+                    </div>
+                    <div class="dadoHistorico">
+                        <p id="dataHistorico">Data: 05/10/2022 </p>
+                        <p id="pontuacaoMonitor">Pontuação: 8.5</p>
                     </div>
                 </div>
 
                 <div class="cardhistorico">
                     <div class="areaHistorico">
-                        <div class="iconCard">
-                            <img src="images/icons/engineer-verde.png" alt="">
-                        </div>
-                        <p>Área: Arquitetura Tecnológica</p>
+                       
                     </div>
                     <div class="dadoHistorico">
-                        <p id="dataHistorico">Data: 05/10/2022 </p>
-                        <p id="pontuacaoHistorico">Pontuação: 8.5</p>
+                        
                     </div>
                 </div>
-    
-                <div class="cardhistorico">
-                    <div class="areaHistorico">
-                        <div class="iconCard">
-                            <img src="images/icons/engineer-verde.png" alt="">
-                        </div>
-                        <p>Área: Arquitetura Tecnológica</p>
-                    </div>
-                    <div class="dadoHistorico">
-                        <p id="dataHistorico">Data: 05/10/2022 </p>
-                        <p id="pontuacaoHistorico">Pontuação: 8.5</p>
-                    </div>
-                </div>
+
         </div>
         
+        <h1 class="h1cadastro">Evolução de pontuação:</h1>
+        <div class="grafico">
+            
+        </div>
+
         <div class="buttons">
             <a href="areas.html">
                 <div class="botoesperfil">
