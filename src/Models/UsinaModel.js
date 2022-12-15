@@ -13,7 +13,13 @@ const UsinaSchema = new Schema({
   respostasMonitoramento: Array,
   respostasInventario: Array,
   respostasGovernanca: Array,
-  respostasVulnerabilidade: Array
+  respostasVulnerabilidade: Array,
+  pontuacaoArquitetura: Number,
+  pontuacaoAcessos: Number,
+  pontuacaoMonitoramento: Number,
+  pontuacaoInventario: Number,
+  pontuacaoGovernanca: Number,
+  pontuacaoVulnerabilidade: Number
 });
 
 const UsinaModel = mongoose.model('usinas', UsinaSchema);

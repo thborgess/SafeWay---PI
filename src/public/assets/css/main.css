@@ -867,5 +867,20 @@ textarea {
 }
 
 
-/* progessive bar */
+/* select usinas */
 
+.deletar {
+    font-size: 18px;
+    height: 38px;
+    background-color: #E66267;
+    border: #E66267;
+}
+
+.botao p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cover {
+    display: none;
+}

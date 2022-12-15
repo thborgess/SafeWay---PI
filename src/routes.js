@@ -13,9 +13,18 @@ const routes = Router();
 routes.post('/usinas', UsinaController.cadastrar);
 routes.get('/usinaslist', UsinaController.list);
 routes.get('/usinas/:id', UsinaController.show);
-routes.put('/usinas/:id', UsinaController.updateResposta);
+routes.delete('/usinasdelete/:id', UsinaController.delete);
+routes.put('/usinasArquitetura/:id', UsinaController.updateRespostaArquitetura);
+routes.put('/usinasAcessos/:id', UsinaController.updateRespostaAcessos);
+routes.put('/usinasMonitoramento/:id', UsinaController.updateRespostaMonitoramento);
+routes.put('/usinasInventario/:id', UsinaController.updateRespostaInventario);
+routes.put('/usinasGovernanca/:id', UsinaController.updateRespostaGovernanca);
+routes.put('/usinasVulnerabilidade/:id', UsinaController.updateRespostaVulnerabilidade);
+
+
 routes.post('/acessos', AcessosController.criar);
 routes.post('/arquitetura', ArquiteturaController.criar);
+routes.get('/arquitetura', ArquiteturaController.list);
 routes.post('/arquitetura', GovernancaController.criar);
 routes.post('/inventario', InventarioController.criar);
 routes.post('/monitoramento', MonitoramentoController.criar);

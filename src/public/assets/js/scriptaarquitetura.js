@@ -1,27 +1,30 @@
-var GestaoTec = [
-    {   
-        "questao": "1",
-        "Pergunta" : "Gestão de pacotes de correção de segurança (patches) para todas as tecnologias conectadas ao ARCiber ?",
+var arquiteturaTec = [
+    {
+        "Pergunta" : "Há uma Zona de supervisão da rede?",
         "Resposta" :true
     },
-    {   
-        "questao": "2",
-        "Pergunta" : "Gestão do cronograma de implementação das correções?",
+    {         
+        "Pergunta" : "Há uma Zona DMZ Operativa na rede?",
         "Resposta" :true
     },
-    {   
-        "questao": "3",
-        "Pergunta" : "Gestão de ativos inventariados para as atualizações disponibilizadas pelos fabricantes?",
+    {         
+        "Pergunta" : "Há uma Zona Corporativa na rede?",
         "Resposta" :true
     },
-    {   
-        "questao": "4",
-        "Pergunta" : "Há restrições de novos ativos até que todos os pacotes de correção de segurança disponíveis sejam aplicados?",
+    {         
+        "Pergunta" : "Há restrição de acesso ao seu ARCiber(Ambiente Regulado Cibernético)?",
         "Resposta" :true
     },
-    {   
-        "questao": "5",
-        "Pergunta" : "Em caso de substituição de equipamento defeituoso a um prazo definido até a aplicação dos pacotes de correção de segurança?",
+    {         
+        "Pergunta" : "Caso seu ARCiber seja acessado por redes externas, há um uso de VPN por meio de um gateway com controle de segurança?",
+        "Resposta" :true
+    },
+    {         
+        "Pergunta" : "Há soluções Antimalware atualizadas no seu ARCiber?",
+        "Resposta" :true
+    },
+    {         
+        "Pergunta" : "Há uso de Application Whitelisting, ou como complemento a Soluções Antimalware?",
         "Resposta" :true
     }
 ]
@@ -33,20 +36,39 @@ var GestaoTec = [
 
 
 
+
+
+
+
+
+
+// QUESTOES
+
+async function listarQuestoes() {
+    const response = await fetch("http://localhost:3000/api/arquitetura");
+
+    console.log(typeof response);
+
+    const questoes = await response.json();
+    var questoesArray = questoes.perguntas
+
+    console.log(questoesArray[0].enunciado);
+}
+
 var count = 0
 
-document.getElementById("enunciado").innerHTML = `<p>${GestaoTec[count].Pergunta}</p>`;
+document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
 
-document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${GestaoTec.length}</h1>`
+document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${arquiteturaTec.length}</h1>` 
 
 function proxPergunta() {
-    if (count + 1 < GestaoTec.length) {
+    if (count + 1 < arquiteturaTec.length) {
         count += 1
     };
 
-    document.getElementById("enunciado").innerHTML = `<p>${GestaoTec[count].Pergunta}</p>`;
+    document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
 
-    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${GestaoTec.length}</h1>`
+    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
 
 
     if (count != 0) {
@@ -70,7 +92,7 @@ function proxPergunta() {
     cardNaoSei.classList.remove("selected");
     document.getElementById("checkedBoxNaoSei").checked = false;
 
-    if (count == GestaoTec.length - 1) {
+    if (count == arquiteturaTec.length - 1) {
         document.getElementById("finalizar").style.display = 'flex'
         document.getElementById("proximo").style.display = 'none'
     } else {
@@ -78,12 +100,12 @@ function proxPergunta() {
         document.getElementById("proximo").style.display = 'flex'
     }
 
-    let porcentoBarra = (count + 1) / GestaoTec.length * 100;
+    let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
 
     document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`
 }
 
-function antPerguntaGestao() {
+function antPergunta() {
     if (count > 0) {
         count -= 1
     }
@@ -95,16 +117,16 @@ function antPerguntaGestao() {
 
     console.log(count)
 
-    document.getElementById("enunciado").innerHTML = `<p>${GestaoTec[count].Pergunta}</p>`;
+    document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
 
-    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${GestaoTec.length}</h1>`
+    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
 
-    if (count != GestaoTec.length - 1) {
+    if (count != arquiteturaTec.length - 1) {
         document.getElementById("finalizar").style.display = 'none'
         document.getElementById("proximo").style.display = 'flex'
     }
 
-    let porcentoBarra = (count + 1) / GestaoTec.length * 100;
+    let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
 
     document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`;
 
@@ -121,11 +143,12 @@ function contarResposta() {
     console.log(respostas);
 }
 
-async function updateResGestao() {
+
+async function updateResArquitetura() {
 
     id = localStorage.getItem('id');
 
-    const resposta = { respostasVulnerabilidade: respostas };
+    const resposta = { respostasArquitetura: respostas };
 
     const options = {
         method: "PUT",
@@ -133,7 +156,7 @@ async function updateResGestao() {
         body: JSON.stringify(resposta) 
     }
 
-    fetch("http://localhost:3000/api/usinasVulnerabilidade/" + id, options).then(res=> {
+    fetch("http://localhost:3000/api/usinasArquitetura/" + id, options).then(res=> {
         console.log(res);
     })
 }
@@ -147,6 +170,6 @@ function gerenciadorProxPergunta() {
 
 function gerenciadorPerguntaFinal() {
     contarResposta();
-    updateResGestao()
+    updateResArquitetura()
     proxPergunta();
 }

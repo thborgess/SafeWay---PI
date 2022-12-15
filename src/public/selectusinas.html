@@ -41,9 +41,18 @@
                     <a href="perfilusina.html">
                         <button type="button" href="" class="btn btn-primary" onclick="selecionarUsina()">Confirmar</button>
                     </a>
-                </div>  
+                </div>
+                <div class="botao">
+                    <button type="button" href="" class="btn btn-primary deletar" onclick="deletarUsina()" >Deletar Usina</button>
+                </div> 
+                <div class="botao">
+                    <p id="usinadelete" class="cover">
+                        Usina deletada!
+                    </p>
+                </div> 
             </form>
         </div>
+        
     </main>
 
     <nav class="menuBar">
@@ -79,6 +88,18 @@
             data.map((usina) => {
                 $('#usinas').append(`<option id="usinaselecionada" value='${usina._id}'>${usina.nomeUsina}</option>`);
             });
+        }
+
+        async function deletarUsina() {
+            selecionarDadosUsina();
+            const idSelected = localStorage.getItem("id")
+
+            fetch("http://localhost:3000/api/usinasdelete/" + idSelected);
+
+            let usinadelete = document.getElementById("usinadelete");
+            usinadelete.classList.remove("cover");
+            
+            listarUsinas();
         }
 
         listarUsinas();

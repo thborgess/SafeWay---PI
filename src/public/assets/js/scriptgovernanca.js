@@ -86,3 +86,44 @@ function antPerguntaGoverno() {
 
     console.log(count)
 }
+
+var respostas = [];
+
+function contarResposta() {
+    const resposta = document.querySelector(".form-check-input:checked").value;
+    
+    respostas.push(resposta);
+
+    console.log(respostas);
+}
+
+
+async function updateResGovernanca() {
+
+    id = localStorage.getItem('id');
+
+    const resposta = { respostasGovernanca: respostas };
+
+    const options = {
+        method: "PUT",
+        headers: new Headers ({ 'content-type': 'application/json' }),
+        body: JSON.stringify(resposta) 
+    }
+
+    fetch("http://localhost:3000/api/usinasGovernanca/" + id, options).then(res=> {
+        console.log(res);
+    })
+}
+
+//Gerenciador
+
+function gerenciadorProxPergunta() {
+    contarResposta();
+    proxPerguntaGoverno();
+}
+
+function gerenciadorPerguntaFinal() {
+    contarResposta();
+    updateResGovernanca()
+    proxPergunta();
+}

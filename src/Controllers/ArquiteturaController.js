@@ -7,6 +7,12 @@ class ArquiteturaController {
         return res.status(200).json(criarQuestao)
     }
 
+    async list (req, res) {
+        const perguntas =  await ArquiteturaModel.find();
+
+        return res.status(200).json({ perguntas });
+    }
+
     
 }
 

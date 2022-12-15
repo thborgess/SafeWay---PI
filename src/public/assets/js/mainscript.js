@@ -1,40 +1,5 @@
-var arquiteturaTec = [
-        {
-            "Pergunta" : "Há uma Zona de supervisão da rede?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Há uma Zona DMZ Operativa na rede?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Há uma Zona Corporativa na rede?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Há restrição de acesso ao seu ARCiber(Ambiente Regulado Cibernético)?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Caso seu ARCiber seja acessado por redes externas, há um uso de VPN por meio de um gateway com controle de segurança?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Há soluções Antimalware atualizadas no seu ARCiber?",
-            "Resposta" :true
-        },
-        {         
-            "Pergunta" : "Há uso de Application Whitelisting, ou como complemento a Soluções Antimalware?",
-            "Resposta" :true
-        }
-]
 
 /* FUNÇÕES */
-
-function arquiteturaTec() {
-    var area = "Arquitetura Tecnológica"
-    return area;
-}
 
 function checkedBoxSim() {
     let cardSim = document.getElementById("cardSim");
@@ -126,83 +91,7 @@ function abaErros() {
     erros.classList.remove("unselected");
 }
 
-var count = 0
 
-document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
-
-document.getElementById("h1questao").innerHTML = `<h1>Questão 1 de ${arquiteturaTec.length}</h1>` 
-
-function proxPergunta() {
-    if (count + 1 < arquiteturaTec.length) {
-        count += 1
-    };
-
-    document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
-
-    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
-
-
-    if (count != 0) {
-        document.getElementById("botoesPergunta").style.justifyContent = 'space-between'
-        document.getElementById("anterior").style.display = 'flex'
-    }
-
-    let cardSim = document.getElementById("cardSim");
-    cardSim.classList.remove("selected");
-    let labelSim = document.getElementById("labelSim");
-    labelSim.classList.remove("selected");
-    document.getElementById("checkedBoxSim").checked = false;
-    let labelNao = document.getElementById("labelNao");
-    labelNao.classList.remove("selected");
-    let cardNao = document.getElementById("cardNao");
-    cardNao.classList.remove("selected");
-    document.getElementById("checkedBoxNao").checked = false;
-    let labelNaoSei = document.getElementById("labelNaoSei");
-    labelNaoSei.classList.remove("selected");
-    let cardNaoSei = document.getElementById("cardNaoSei");
-    cardNaoSei.classList.remove("selected");
-    document.getElementById("checkedBoxNaoSei").checked = false;
-
-    if (count == arquiteturaTec.length - 1) {
-        document.getElementById("finalizar").style.display = 'flex'
-        document.getElementById("proximo").style.display = 'none'
-    } else {
-        document.getElementById("finalizar").style.display = 'none'
-        document.getElementById("proximo").style.display = 'flex'
-    }
-
-    let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
-
-    document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`
-}
-
-function antPergunta() {
-    if (count > 0) {
-        count -= 1
-    }
-
-    if (count == 0) {
-        document.getElementById("botoesPergunta").style.justifyContent = 'flex-end'
-        document.getElementById("anterior").style.display = 'none'
-    }
-
-    console.log(count)
-
-    document.getElementById("enunciado").innerHTML = `<p>${arquiteturaTec[count].Pergunta}</p>`;
-
-    document.getElementById("h1questao").innerHTML = `<h1>Questão ${count + 1} de ${arquiteturaTec.length}</h1>`
-
-    if (count != arquiteturaTec.length - 1) {
-        document.getElementById("finalizar").style.display = 'none'
-        document.getElementById("proximo").style.display = 'flex'
-    }
-
-    let porcentoBarra = (count + 1) / arquiteturaTec.length * 100;
-
-    document.getElementById("barraQuestionario").style.width = `${porcentoBarra}%`;
-
-    console.log(count)
-}
 
 function saveName(){
     const nomeUsina = document.getElementById("nomeUsina").value
@@ -224,8 +113,19 @@ function selecionarDadosUsina() {
     } 
 
     localStorage.setItem('id', idUsinaSelect)
-    localStorage.setItem('name', nomeUsinaSelect)
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* funções API */
 
@@ -236,17 +136,21 @@ async function showUsinaNome() {
 
     const usina = await response.json();
 
-
-
     document.getElementById("nomeusinah1").innerHTML = `<h1> ${usina.nomeUsina} </h1>`; 
 }
 
 function cadastrarUsina() {
-    const nomeGestor =  document.getElementById("nomeGestor").value
-    const nomeUsina =  document.getElementById("nomeUsina").value
-    const endereco =  document.getElementById("endereco").value
+    const nomeGestor =  document.getElementById("nomeGestor").value;
+    const nomeUsina =  document.getElementById("nomeUsina").value;
+    const endereco =  document.getElementById("endereco").value;
+    const pontuacaoArquitetura = 0;
+    const pontuacaoAcessos = 0;
+    const pontuacaoMonitoramento= 0;
+    const pontuacaoInventario= 0;
+    const pontuacaoGovernanca= 0;
+    const pontuacaoVulnerabilidade= 0;
 
-    const usina = {nomeGestor, nomeUsina, endereco}
+    const usina = {nomeGestor, nomeUsina, endereco, pontuacaoArquitetura, pontuacaoAcessos, pontuacaoMonitoramento, pontuacaoVulnerabilidade, pontuacaoInventario, pontuacaoGovernanca}
 
     const options = {
         method: "POST",
@@ -260,29 +164,21 @@ function cadastrarUsina() {
 }
 
 
-async function listarUsinas() {
-    const response = await fetch("http://localhost:3000/api/usinaslist");
 
-    console.log(response);
 
-    const usinas = await response.json();
 
-    console.log(usinas); 
 
-    usinas.map((usina) => {
-        $('#select2').append(`<option value='${usina.nomeUsina}'>${usina.nomeUsina}</option>`);
-      });
-}
+
+
+
+
+
+
+
 
 /* organizador */
 function selecionarUsina() {
     selecionarDadosUsina();
-}
-
-
-function botaoProxPergunta() {
-    contarRespostaArquitetura();
-    proxPergunta();
 }
 
 function aposCadastrar() {
