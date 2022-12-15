@@ -277,7 +277,7 @@ async function contarRespostaGeral() {
     const pontuacaoGeral = usina.pontuacaoArquitetura + usina.pontuacaoInventario + usina.pontuacaoAcessos + usina.pontuacaoMonitoramento + usina.pontuacaoGovernanca + usina.pontuacaoVulnerabilidade;
 
 
-    const resposta = { pontuacaoGeral: pontuacaoGeral };
+    const resposta = { pontuacaoGeral: pontuacaoGeral.toFixed(1) };
 
     const options = {
         method: "PUT",

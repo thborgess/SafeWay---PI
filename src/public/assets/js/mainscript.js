@@ -180,6 +180,101 @@ function cadastrarUsina() {
     })
 }
 
+async function listarRankingInicial() {
+    const response = await fetch("http://localhost:3000/api/usinaslist");
+
+    console.log(typeof response);
+
+    const usinas = await response.json();
+    const data = usinas.usinas
+
+    console.log(typeof usinas); 
+
+    let pontuacoes = [];
+
+    data.map((usina) => {  
+        pontuacoes.push({ pontos : usina.pontuacaoGeral,  nome : usina.nomeUsina});
+    });
+
+    pontuacoes.sort(function (a, b) {
+        return b.pontos - a.pontos;
+    });
+
+    console.log(pontuacoes);
+
+    for (let i = 0; i < 5; i++) {
+        if (i == 0) {
+            var html = `
+            <div class="posicao">
+                <div class="nomeUsina">
+                    <div class="colocacao primeiro">1</div>
+                    <p>${pontuacoes[i].nome}</p>
+                </div>
+                <div class="progress" >
+                    <div id="clara" class="progress-bar" role="progressbar" aria-valuenow="${pontuacoes[i].pontos}"
+                    aria-valuemin="0" aria-valuemax="60" style="width:${(pontuacoes[i].pontos/ 60) * 100}%">
+                    <p>${pontuacoes[i].pontos} pontos</p>
+                    </div>
+                </div>
+            </div>
+            `
+        } else if (i == 1) { 
+            var html = `
+            <div class="posicao">
+                <div class="nomeUsina">
+                    <div class="colocacao segundo">2</div>
+                    <p>${pontuacoes[i].nome}</p>
+                </div>
+                <div class="progress" >
+                    <div id="clara" class="progress-bar" role="progressbar" aria-valuenow="${pontuacoes[i].pontos}" aria-valu}"
+                    aria-valuemin="0" aria-valuemax="60" style="width:${(pontuacoes[i].pontos / 60) * 100}%">
+                    <p>${pontuacoes[i].pontos} pontos</p>
+                    </div>
+                </div>
+            </div>
+            `
+        } else if (i == 2) {
+            var html = `
+            <div class="posicao">
+                <div class="nomeUsina">
+                    <div class="colocacao terceiro">3</div>
+                    <p>${pontuacoes[i].nome}</p>
+                </div>
+                <div class="progress" >
+                    <div id="clara" class="progress-bar" role="progressbar" aria-valuenow="${pontuacoes[i].pontos}"
+                    aria-valuemin="0" aria-valuemax="60" style="width:${(pontuacoes[i].pontos / 60) * 100}%">
+                    <p>${pontuacoes[i].pontos} pontos</p>
+                    </div>
+                </div>
+            </div>
+            `
+        } else {
+            var html = `
+            <div class="posicao">
+                <div class="nomeUsina">
+                    <div class="colocacao">${i+1}</div>
+                    <p>${pontuacoes[i].nome}</p>
+                </div>
+                <div class="progress" >
+                    <div id="clara" class="progress-bar" role="progressbar" aria-valuenow="${pontuacoes[i].pontos}"
+                    aria-valuemin="0" aria-valuemax="60" style="width:${(pontuacoes[i].pontos / 60) * 100}%">
+                    <p>${pontuacoes[i].pontos} pontos</p>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+    
+
+        if (pontuacoes[i] != undefined) {
+            let pontRanking = document.createElement('div');
+            pontRanking.innerHTML = html;
+            document.getElementById('ranking').appendChild(pontRanking);
+        }
+       
+    }
+}
+
 
 
 

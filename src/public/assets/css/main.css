@@ -259,13 +259,14 @@ nav {
     justify-content: flex-end;
     align-items: center;
     width: 330px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .verMais p {
     font-weight: 600;
     text-decoration: underline;
     color: #918E8E;
+    margin-bottom: 0px;
 }
 
 .verMais img {
