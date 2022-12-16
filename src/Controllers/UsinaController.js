@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 
 class UsinaController {
     async cadastrar(req, res) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         const nomeUsina = req.body.nomeUsina;
         console.log(nomeUsina)
 

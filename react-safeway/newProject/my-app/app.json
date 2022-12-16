@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/playstore.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/logotipo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#011C40"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logotipo.png",
+        "backgroundColor": "#011C40"
+      }
+    },
+    "web": {
+      "favicon": "./assets/logotipo.png"
+    }
+  }
+}
