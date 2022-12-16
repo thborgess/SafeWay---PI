@@ -12,12 +12,18 @@
 - O que é SafeWay?
 - Ativação da aplicação no _localhost_
 - Ativação da aplicação no React Native
+- Link PWA Ilustrativo
 - Tecnologias Utilizadas
 - Colaboradores
 
 <br>
 
 ## Introdução
+
+- Mapeamento da segurança digital da Usina
+- Questionário baseado em reomendações da ONS (Operador Nacional de Serviços Elétricos)
+- Potuação e recomendações sobre o que precisa ser feito
+- Ranking de usinas mais qualificadas quanto à segurança digital
 
 <p align = "center">
   <img src = "https://user-images.githubusercontent.com/93235055/207127691-a54de01d-b90a-498c-b79f-6762aaeea71c.png" width=350>
@@ -45,7 +51,7 @@ npm run dev
 
 > _Instalação dos pacotes_
 
-```
+```npm
 npm install 
 ```
 
@@ -54,6 +60,14 @@ npm install
 ```
 npm start
 ```
+
+<br>
+
+## PWA Ilusrativo
+
+- [https://safeway-pwa.netlify.app/]
+<img src = "https://user-images.githubusercontent.com/93235055/208099160-ebba60ec-5f0d-41ad-87ea-9df02809aece.png" width = 200px align = right/> 
+
 
 <br>
 
