@@ -4,22 +4,111 @@
 </p>
 
 <p align = "center">
-  Aplicativo para mapeamento da segurança digital de usinas hidrelétricas.
-</p>
+  Aplicativo para mapeamento da segurança digital de usinas elétricas.
+</p> <br>
 
 ## Sumário
 
-- [Introdução](#introduction)
-- [Tecnologias Utilizadas](#features)
-- [Colaboradores](#contributors)
+- SafeWay e suas funcionalidades
+- Ativação da aplicação no _localhost_
+- Ativação da aplicação no React Native
+- PWA Ilustrativo
+- Tecnologias Utilizadas
+- Colaboradores
 
 <br>
 
-## Introdução
+## SafeWay e suas funcinalidades
 
-<p align = "center">
-  <img src = "https://user-images.githubusercontent.com/93235055/207127691-a54de01d-b90a-498c-b79f-6762aaeea71c.png" width=350>
-</p>
+<div>
+    <p align = "center">
+        <img src = "https://user-images.githubusercontent.com/93235055/207127691-a54de01d-b90a-498c-b79f-6762aaeea71c.png" width=350>
+    </p>
+    <ul>
+        <li> Mapeamento da segurança digita da usina</li>
+        <li> Questionário baseado em recomendações da ONS (Operador Nacional de Sistemas Elétricos) </li>
+        <li> Pontuação e recomendações sobre os acertos e erros na segurança digital </li>
+        <li> Ranking das usinas mais qualificadas quanto a segurança digital </li>
+    </ul>     
+</div>
+
+<table>
+    <tr>
+        <td align="center">
+            <img src="https://user-images.githubusercontent.com/93235055/208146706-7e08365a-fc5e-47b8-af65-0bc5f9fd259f.png" width="180px;" alt="Tela de Cadastro"/><br>
+            <sub>
+              <b>Cadastro de Usinas</b>
+            </sub>
+    </tr>    
+    <tr>
+    <td align="center">
+            <img src="https://user-images.githubusercontent.com/93235055/208147239-d5605d3f-8872-46e0-893b-669a353228c3.png" width="180px;" alt="Tela de Cadastro"/><br>
+            <sub>
+              <b>Questionário dividido por áreas</b>
+            </sub>
+    </tr> 
+    <tr>
+    <td align="center">
+            <img src="https://user-images.githubusercontent.com/93235055/208147922-16f2bf87-7910-42fd-8e7d-19ec13d726c7.png" width="180px;" alt="Tela de Cadastro"/><br>
+            <sub>
+              <b>Feedback do questionário</b>
+            </sub>
+    </tr> 
+     <tr>
+    <td align="center">
+            <img src="https://user-images.githubusercontent.com/93235055/208147970-9e705f2a-dd15-45b0-9a1e-b0cf67951953.png" width="180px;" alt="Tela de Cadastro"/><br>
+            <sub>
+              <b>Ranking de Usinas</b>
+            </sub>
+    </tr> 
+</table> 
+
+<br>
+
+## Ativação da aplicação no _localhost_
+
+> _Instalação dos pacotes_
+
+```
+npm install 
+```
+
+> _Execução da API em localhost_
+
+```
+npm run dev
+```
+
+<br>
+
+## Ativação da aplicação no React Native
+
+> _Instalação dos pacotes_
+
+```npm
+npm install 
+```
+
+> _Execução da aplicação no React Native_
+
+```
+npm start
+```
+
+<br>
+
+## PWA Ilustrativo 
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://safeway-pwa.netlify.app/" target="_blank">
+        <img src="https://user-images.githubusercontent.com/93235055/208099160-ebba60ec-5f0d-41ad-87ea-9df02809aece.png" width="230px;" alt="QRCode PWA"/><br>
+        <sub>
+          <b>PWA SafeWay</b>
+        </sub>
+    </tr>    
+</table> 
 
 <br>
 
@@ -28,6 +117,7 @@
 - <img src = "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 - <img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
 - <img src = "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+- <img src = "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
 - <img src = "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
 - <img src = "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 - <img src = "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
