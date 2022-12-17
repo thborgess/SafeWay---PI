@@ -66,7 +66,7 @@
             <td align="center">
                 <img src="https://user-images.githubusercontent.com/93235055/208147239-d5605d3f-8872-46e0-893b-669a353228c3.png" width="180px;" alt="Tela de Cadastro"/><br>
                 <sub>
-                  <b>Questionário dividido por áreas</b>
+                  <b>Questionário</b>
                 </sub>
         </th> 
         <th>
