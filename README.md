@@ -9,7 +9,8 @@
 
 ## Sumário
 
-- SafeWay e suas funcionalidades
+- SafeWay
+- Funcionalidaes
 - Ativação da aplicação no _localhost_
 - Ativação da aplicação no React Native
 - PWA Ilustrativo
@@ -20,48 +21,70 @@
 
 ## SafeWay e suas funcinalidades
 
-<div>
-    <p align = "center">
-        <img src = "https://user-images.githubusercontent.com/93235055/207127691-a54de01d-b90a-498c-b79f-6762aaeea71c.png" width=350>
-    </p>
-    <ul>
-        <li> Mapeamento da segurança digita da usina</li>
-        <li> Questionário baseado em recomendações da ONS (Operador Nacional de Sistemas Elétricos) </li>
-        <li> Pontuação e recomendações sobre os acertos e erros na segurança digital </li>
-        <li> Ranking das usinas mais qualificadas quanto a segurança digital </li>
-    </ul>     
-</div>
+<p> A SafeWay foi idealizada a partir de uma problemática de *monitoramento da segurança digital* de uma empresa do setor elétrico.</p><br>
 
-<table>
-    <tr>
-        <td align="center">
-            <img src="https://user-images.githubusercontent.com/93235055/208146706-7e08365a-fc5e-47b8-af65-0bc5f9fd259f.png" width="180px;" alt="Tela de Cadastro"/><br>
-            <sub>
-              <b>Cadastro de Usinas</b>
-            </sub>
-    </tr>    
-    <tr>
-    <td align="center">
-            <img src="https://user-images.githubusercontent.com/93235055/208147239-d5605d3f-8872-46e0-893b-669a353228c3.png" width="180px;" alt="Tela de Cadastro"/><br>
-            <sub>
-              <b>Questionário dividido por áreas</b>
-            </sub>
-    </tr> 
-    <tr>
-    <td align="center">
-            <img src="https://user-images.githubusercontent.com/93235055/208147922-16f2bf87-7910-42fd-8e7d-19ec13d726c7.png" width="180px;" alt="Tela de Cadastro"/><br>
-            <sub>
-              <b>Feedback do questionário</b>
-            </sub>
-    </tr> 
-     <tr>
-    <td align="center">
-            <img src="https://user-images.githubusercontent.com/93235055/208147970-9e705f2a-dd15-45b0-9a1e-b0cf67951953.png" width="180px;" alt="Tela de Cadastro"/><br>
-            <sub>
-              <b>Ranking de Usinas</b>
-            </sub>
-    </tr> 
-</table> 
+<table align = center>
+        <th>
+            <td align = "center">
+                <img src="https://user-images.githubusercontent.com/93235055/208209761-6c6c5122-7298-47f6-aceb-c1a080addc45.png" width ="180px;" alt="Tela Inicial"/><br>
+                <sub>
+                  <b>Tela Inicial</b>
+                </sub>
+        </th>    
+        <th>
+            <td align="center">
+                <img src="https://user-images.githubusercontent.com/93235055/208209616-2c4fb11e-19b3-4169-900d-7d607b700fa7.png" width = "160px;" alt="Home"/><br>
+                <sub>
+                  <b>Home</b>
+                </sub>
+        </th> 
+</table>
+
+<br>
+
+## Funcionalidades
+
+<ul>
+    <li> Mapeamento da segurança digita da usina</li>
+    <li> Questionário baseado em recomendações da ONS (Operador Nacional de Sistemas Elétricos) </li>
+    <li> Pontuação e recomendações sobre os acertos e erros na segurança digital </li>
+    <li> Ranking das usinas mais qualificadas quanto a segurança digital </li>
+</ul>     
+
+<br>
+
+<div align = center>
+    <table>
+        <th>
+            <td align="center">
+                <img src="https://user-images.githubusercontent.com/93235055/208146706-7e08365a-fc5e-47b8-af65-0bc5f9fd259f.png" width="180px;" alt="Tela de Cadastro"/><br>
+                <sub>
+                  <b>Cadastro de Usinas</b>
+                </sub>
+        </th>    
+        <th>
+            <td align="center">
+                <img src="https://user-images.githubusercontent.com/93235055/208147239-d5605d3f-8872-46e0-893b-669a353228c3.png" width="180px;" alt="Tela de Cadastro"/><br>
+                <sub>
+                  <b>Questionário dividido por áreas</b>
+                </sub>
+        </th> 
+        <th>
+            <td align="center">
+                <img src="https://user-images.githubusercontent.com/93235055/208147922-16f2bf87-7910-42fd-8e7d-19ec13d726c7.png" width="180px;" alt="Tela de Cadastro"/><br>
+                <sub>
+                  <b>Feedback do questionário</b>
+                </sub>
+        </th> 
+         <th>
+            <td align="center">
+                <img src="https://user-images.githubusercontent.com/93235055/208147970-9e705f2a-dd15-45b0-9a1e-b0cf67951953.png" width="157px;" alt="Tela de Cadastro"/><br>
+                <sub>
+                  <b>Ranking de Usinas</b>
+                </sub>
+        </th> 
+    </table> 
+</div> 
 
 <br>
 
