@@ -19,7 +19,7 @@
 
 <br>
 
-## SafeWay e suas funcinalidades
+## SafeWay
 
 <p> A SafeWay foi idealizada a partir de uma problemática de *monitoramento da segurança digital* de uma empresa do setor elétrico.</p><br>
 
